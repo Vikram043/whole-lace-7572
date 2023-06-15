@@ -4,11 +4,12 @@ const bcrypt = require("bcrypt");
 
 const clientRouter = express.Router();
 
-// client booking route
+// client booking route and sent the email 
 
 const nodemailer = require("nodemailer");
 
 // Set up transporter for sending emails
+
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -87,7 +88,7 @@ clientRouter.get("/",async(req,res)=>{
 })
 
 
-// client update the appointment
+// client update the appointment and sent the email 
 
 clientRouter.patch("/update/:clientId", async (req, res) => {
     const clientId = req.params.clientId;
@@ -101,7 +102,7 @@ clientRouter.patch("/update/:clientId", async (req, res) => {
   
       // Send email to the client
       const clientEmailData = {
-        from: "your_email",
+        from: "chauhanrohit716@gmail.com",
         to: updatedClient.email,
         subject: "Appointment Update",
         text: "Your appointment has been updated.",
