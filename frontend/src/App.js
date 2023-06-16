@@ -1,12 +1,21 @@
 
-import './App.css';
-import Home from './Pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+// import Dashboard from './pages/Dashboard'
+// import Layout from './components/shared/Layout.jsx'
+// import Products from './pages/Products'
+
 function App() {
-  return (
-    <div className="App">
-    <Home />
-    </div>
-  );
+    return (
+        <Router>
+            {/* <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Dashboard />} />
+                    <Route path="products" element={<Products />} />
+                </Route>
+                <Route path="/register" element={<div>Register</div>} />
+            </Routes> */}
+        </Router>
+    )
 }
 
-export default App;
+export default App
