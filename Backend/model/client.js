@@ -27,20 +27,7 @@ const clientSchema = new mongoose.Schema(
         },
         pet_category: {
             type: String,
-            enum: ["cat", "dog", "horse", "fish", "rabbit"],
-            required: true,
-        },
-        pet_age: {
-            type: Number,
-            required: true,
-        },
-        pet_gender: {
-            type: String,
-            enum: ["male", "female", "other"],
-            required: true,
-        },
-        breed: {
-            type: String,
+            enum: ["Cat", "Dog", "Horse", "Fish", "Rabbit"],
             required: true,
         },
         disease_suffering: {
