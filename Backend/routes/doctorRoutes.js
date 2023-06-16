@@ -2,9 +2,11 @@ const express = require("express");
 const {DocModel} = require("../model/doctor")
 const docRouter = express.Router();
 
+
+
+
 docRouter.get("/", async (req, res) => {
     try{
-        console.log("inside")
         let docDetails= await DocModel.find();
         res.status(200).send(docDetails)
     }catch(err){

@@ -1,14 +1,14 @@
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
 // import Dashboard from './pages/Dashboard'
 // import Layout from './components/shared/Layout.jsx'
 // import Products from './pages/Products'
+import Doctor from './Pages/Doctor'
 
 import {Client} from './Pages/Client';
 
 function App() {
     return (
+
         <Router>
             
             {/* <Routes>
