@@ -1,0 +1,38 @@
+
+#Nav{
+    background-color: purple;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo, #profilePic{
+    height: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* margin-top: 20px; */
+}
+#searchLogin-btn{
+    /* margin-top: 20px; */
+    width: 40%;
+    height: 40px;
+}
+
+#profile{
+    color: black;
+    width: 25%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-around;
+}
+#searchBar{
+    width: 80%;
+}
+#profilePic{
+    margin-top: 8px;
+    height: 55px;
+    border-radius: 30%;
+}
+button{
+    border-radius: 5%;
+}
