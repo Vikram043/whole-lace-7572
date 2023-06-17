@@ -14,7 +14,6 @@ const transporter = nodemailer.createTransport({
 const clientRouter = express.Router();
 
 clientRouter.post("/details", async (req, res) => {
-  const doctoId=142345;
   const {
     client_name,
     contact,
@@ -22,8 +21,7 @@ clientRouter.post("/details", async (req, res) => {
     address,
     pet_category,
     disease_suffering,
-    veterinary_appointment,
-    doctorId,
+    veterinary_appointment
   
   } = req.body;
 
@@ -36,21 +34,19 @@ clientRouter.post("/details", async (req, res) => {
       address,
       pet_category,
       disease_suffering,
-      veterinary_appointment,
-      doctor: doctorId,
-      
+      veterinary_appointment
     });
 
     await client.save();
 
     // Fetch the doctor's details
-    console.log("Doctor ID:", doctorId);
-    const doctor = await DocModel.findById(doctorId);
-    console.log("Doctor:", doctor);
+    // console.log("Doctor ID:", doctorId);
+    // const doctor = await DocModel.findById(doctorId);
+    // console.log("Doctor:", doctor);
     
-    if (!doctor) {
-      throw new Error("Doctor not found");
-    }
+    // if (!doctor) {
+    //   throw new Error("Doctor not found");
+    // }
 
     // Send email to the client
     const appointmentDate = new Date(veterinary_appointment);
@@ -71,7 +67,7 @@ clientRouter.post("/details", async (req, res) => {
     // Send email to the doctor
     const doctorEmailData = {
       from: "chauhanrohit716@gmail.com",
-      to: doctor.email,
+      to: "venkat88676@gmail.com",
       subject: "New Appointment",
       text: "A new appointment has been booked.",
       html: `<p>A new appointment has been booked.</p>
@@ -102,7 +98,7 @@ clientRouter.post("/details", async (req, res) => {
   }
 });
 
-module.exports = { clientRouter };
+
 
 
   
