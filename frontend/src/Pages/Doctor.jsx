@@ -1,14 +1,15 @@
 import React from 'react'
 // import Navbar from "../Components/Navbar"
 // import Footer from "../Components/Footer"
+import { Link } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 
-import "../style/doctor.css"
+import "../Style/doctor.css"
 export default function Doctor() {
   const [data, setData] = useState([])
   const [filterData, setFilterData] = useState([])
   useEffect(()=>{
-    fetch("http://localhost:4300/doctor/")
+    fetch("http://localhost:8000/doctor/")
     .then((res)=>res.json())
     .then((res)=>{
       console.log("hello")
@@ -18,6 +19,7 @@ export default function Doctor() {
     })
     .catch(err=>console.log(err))
   },[])
+ 
   return (
     <div>
       <h2>Navigation..</h2>
@@ -53,8 +55,7 @@ export default function Doctor() {
               <p>{e.bio}</p>
               <p>Email:- {e.email}</p>
               <p>Rating:- {e.rating}</p>
-              <button>Book Now</button>
-
+              <Link to='/client'><button onClick={()=>localStorage.setItem('key' ,JSON.stringify(e.name))}>Book Now</button></Link> 
             </div>
             )
           })

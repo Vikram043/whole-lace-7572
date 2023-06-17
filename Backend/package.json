@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "doctor":"nodemon doctor.js"
+    "server":"nodemon doctor.js"
   },
   "keywords": [],
   "author": "",
