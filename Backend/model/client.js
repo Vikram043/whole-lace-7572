@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 
 const clientSchema = new mongoose.Schema(
     {
-        name: {
+        client_name: {
             type: String,
-            required: true,
+            // required: true,
         },
         contact: {
             type: String,
@@ -27,26 +27,17 @@ const clientSchema = new mongoose.Schema(
         },
         pet_category: {
             type: String,
-            enum: ["cat", "dog", "horse", "fish", "rabbit"],
-            required: true,
-        },
-        pet_age: {
-            type: Number,
-            required: true,
-        },
-        pet_gender: {
-            type: String,
-            enum: ["male", "female", "other"],
-            required: true,
-        },
-        breed: {
-            type: String,
+            enum: ["Cat", "Dog", "Horse", "Fish", "Rabbit"],
             required: true,
         },
         disease_suffering: {
             type: String,
             required: true,
         },
+        // doctorId:{
+        //     type:Number,
+        //     required:true
+        // },
         veterinary_appointment: {
             type: Date,
             required: true,

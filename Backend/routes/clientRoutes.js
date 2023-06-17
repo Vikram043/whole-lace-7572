@@ -1,86 +1,107 @@
 const express = require("express");
 const { ClientModel } = require("../model/client");
-const bcrypt = require("bcrypt");
+const { DocModel } = require("../model/doctor");
+const nodemailer = require("nodemailer");
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "chauhanrohit716@gmail.com",
+    pass: "aihdxunhyyjycqrv",
+  },
+});
 
 const clientRouter = express.Router();
 
-// client booking route and sent the email 
-
-const nodemailer = require("nodemailer");
-
-// Set up transporter for sending emails
-
-const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: "chauhanrohit716@gmail.com",
-        pass: "aihdxunhyyjycqrv",
-    },
-});
-
 clientRouter.post("/details", async (req, res) => {
-    const {
-        name,
-        contact,
-        email,
-        address,
-        pet_category,
-        pet_age,
-        pet_gender,
-        breed,
-        disease_suffering,
-        veterinary_appointment
-    } = req.body;
+  const {
+    client_name,
+    contact,
+    email,
+    address,
+    pet_category,
+    disease_suffering,
+    veterinary_appointment
+  
+  } = req.body;
 
-    try {
+ 
+  try {
+    const client = new ClientModel({
+      client_name,
+      contact,
+      email,
+      address,
+      pet_category,
+      disease_suffering,
+      veterinary_appointment
+    });
 
-        const client = new ClientModel({
-            name,
-            contact,
-            email,
-            address,
-            pet_category,
-            pet_age,
-            pet_gender,
-            breed,
-            disease_suffering,
-            veterinary_appointment
-        });
+    await client.save();
 
-        await client.save();
+    // Fetch the doctor's details
+    // console.log("Doctor ID:", doctorId);
+    // const doctor = await DocModel.findById(doctorId);
+    // console.log("Doctor:", doctor);
+    
+    // if (!doctor) {
+    //   throw new Error("Doctor not found");
+    // }
 
-        // Send email to the client
+    // Send email to the client
+    const appointmentDate = new Date(veterinary_appointment);
+    const formattedDate = appointmentDate.toLocaleDateString();
+    const formattedDay = appointmentDate.toLocaleDateString("en-US", {
+      weekday: "long",
+    });
 
-        const appointmentDate = new Date(veterinary_appointment);
-        const formattedDate = appointmentDate.toLocaleDateString();
-        const formattedDay = appointmentDate.toLocaleDateString('en-US', { weekday: 'long' });
-
-        const clientEmailData = {
-            from: "chauhanrohit716@gmail.com",
-            to: email,
-            subject: "Appointment Confirmation",
-            text: "Thank you for booking the appointment.",
-            html: `<p>Thank you for booking the appointment.</p>
+    const clientEmailData = {
+      from: "chauhanrohit716@gmail.com",
+      to: email,
+      subject: "Appointment Confirmation",
+      text: "Thank you for booking the appointment.",
+      html: `<p>Thank you for booking the appointment.</p>
          <p>Your appointment is scheduled on: ${formattedDay}, ${formattedDate}</p>`,
-        };
+    };
 
-        transporter.sendMail(clientEmailData, (error, info) => {
-            if (error) {
-                console.log("Error sending email:", error);
-            } else {
-                console.log("Email sent:", info.response);
-            }
-        });
+    // Send email to the doctor
+    const doctorEmailData = {
+      from: "chauhanrohit716@gmail.com",
+      to: "venkat88676@gmail.com",
+      subject: "New Appointment",
+      text: "A new appointment has been booked.",
+      html: `<p>A new appointment has been booked.</p>
+         <p>Client Name: ${client_name}</p>
+         <p>Appointment Date: ${formattedDay}, ${formattedDate}</p>`,
+    };
 
-        res.status(200).send({ msg: "Client registered successfully!" });
-    } catch (error) {
-        res.status(400).send({ msg: error.message });
-    }
+    transporter.sendMail(clientEmailData, (error, info) => {
+      if (error) {
+        console.log("Error sending client email:", error);
+      } else {
+        console.log("Client email sent:", info.response);
+      }
+    });
+
+    transporter.sendMail(doctorEmailData, (error, info) => {
+      if (error) {
+        console.log("Error sending doctor email:", error);
+      } else {
+        console.log("Doctor email sent:", info.response);
+      }
+    });
+
+    res.status(200).send({ msg: "Client registered successfully!" });
+  } catch (error) {
+    res.status(400).send({ msg: error.message });
+    console.log(error);
+  }
 });
 
 
-// client show the appointment
 
+
+  
 
 clientRouter.get("/", async (req, res) => {
     try {

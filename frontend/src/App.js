@@ -1,20 +1,37 @@
-import React from 'react'
 
-import {Route,BrowserRouter as Router, Routes} from 'react-router-dom' 
-import Home from './Pages/Home'
-import AboutPage from './Pages/AboutPage';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Layout from './components/shared/Layout';
+// import Dashboard from './pages/Dashboard';
+// import Products from './pages/Products';
+import Doctor from './Pages/Doctor';
+import Client from './Pages/Client';
+import Signup from './Pages/Signup';
 import Login from './Pages/Login';
-import Profile from './Pages/Profile';
+import AdminLogin from './Components/AdminLogin';
+import DoctorLogin from './Components/DoctorLogin';
+
+
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route exact path='/' Component={Home} />
-        <Route path='/profile' Component={Profile}/>
-        <Route path='/about' Component={AboutPage}/>
-      </Routes>
-    </Router>
-  )
+    return (
+
+
+        <Router>
+
+             <Routes>
+               {/* <Route path="/" element={<Dashboard />} /> */}
+               {/* <Route path="/products" element={<Products />} /> */}
+                {/* <Route path="/doctor" element={<Doctor />} /> */}
+                <Route path="/client" element={<Client />} />
+                <Route path="/doctor" element={<Doctor />} />
+                <Route path="/user/signup" element={<Signup />} />
+                <Route path="/user/login" element={<Login />} />
+                <Route path="/admin/login" element={<AdminLogin />} />
+                <Route path="/doctor/login" element={<DoctorLogin/>}></Route>
+               {/* <Route path="/register" element={<div>Register</div>} /> */}
+            </Routes>
+        </Router>
+    );
 }
 
-export default App
+export default App;
