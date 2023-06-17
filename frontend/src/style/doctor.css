@@ -1,5 +1,7 @@
 
-
+*{
+    /* color: black !important; */
+}
 #doc-container{
     width: 90%;
     margin: auto;

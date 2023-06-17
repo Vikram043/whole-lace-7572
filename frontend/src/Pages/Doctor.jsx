@@ -2,13 +2,16 @@ import React from 'react'
 // import Navbar from "../Components/Navbar"
 // import Footer from "../Components/Footer"
 import { useState,useEffect } from 'react'
-
+// import {  Route } from 'react-router-dom';
+// import Client  from './Client'
 import "../style/doctor.css"
+
+
 export default function Doctor() {
   const [data, setData] = useState([])
   const [filterData, setFilterData] = useState([])
   useEffect(()=>{
-    fetch("http://localhost:4300/doctor/")
+    fetch("http://localhost:8000/doctor/")
     .then((res)=>res.json())
     .then((res)=>{
       console.log("hello")
@@ -20,7 +23,8 @@ export default function Doctor() {
   },[])
   return (
     <div>
-      <h2>Navigation..</h2>
+      <h2>Navigation..</h2>      
+     
       <select id="select-pet"onChange={(event)=>{
         console.log(event.target.value)
         if(event.target.value==="all")
@@ -53,7 +57,8 @@ export default function Doctor() {
               <p>{e.bio}</p>
               <p>Email:- {e.email}</p>
               <p>Rating:- {e.rating}</p>
-              <button>Book Now</button>
+              <button>Book Now</button>       
+              
 
             </div>
             )
