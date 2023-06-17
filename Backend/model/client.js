@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const clientSchema = new mongoose.Schema(
     {
-        name: {
+        client_name: {
             type: String,
             required: true,
         },
@@ -34,6 +34,10 @@ const clientSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+        // doctorId:{
+        //     type:Number,
+        //     required:true
+        // },
         veterinary_appointment: {
             type: Date,
             required: true,

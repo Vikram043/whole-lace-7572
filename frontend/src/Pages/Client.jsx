@@ -1,29 +1,52 @@
 
 
 
-import { useState } from "react"
-import ClientCss from './ClientCss.css'
+// import { useState } from "react"
+import "./ClientCss.css";
+import { useState,useEffect } from 'react'
 
-const Client = () => {
-  const [name, setName] = useState('');
+
+
+export default function Client() {
+  const [clientName, setClientName] = useState('');
   const [contact, setContact] = useState('');
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [pet_category, setCategory] = useState('');
   const [disease_suffering, setDisease] = useState('');
   const [veterinary_appointment, setAppointment] = useState('');
+  // const [name,setName]=usestate('');
+  // const
+  // const [data, setData] = useState([])
+
+  const DoctorId=JSON.parse(localStorage.getItem("key"))
 
 
   const handleSubmit = () => {
     const payload = {
-      name,
+      clientName,
       contact,
       email,
       address,
       pet_category,
       disease_suffering,
+      DoctorId:DoctorId,
       veterinary_appointment,
     }
+
+    
+      
+      // useEffect(()=>{
+      //   fetch("http://localhost:4300/doctor/")
+      //   .then((res)=>res.json())
+      //   .then((res)=>{
+      //     console.log(res)
+      //     setData(res)
+      //   })
+      //   .catch(err=>console.log(err))
+      // },[])
+
+
     // connecting FE with BE
     fetch("http://localhost:8000/users/details/", {
       method: "POST",
@@ -50,14 +73,15 @@ const Client = () => {
   return (
     <>
       <h1>booking appointment</h1>
+      <h2>Doctor's Name:-{JSON.stringify(DoctorId)}</h2>
       <div className="overall">
       <div className="registerform">
-        Name: <input
+        clientName: <input
           type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Name"
+          id="clientName"
+          value={clientName}
+          onChange={(e) => setClientName(e.target.value)}
+          placeholder="clientName"
           required
         />
         Contact: <input
@@ -113,6 +137,13 @@ const Client = () => {
           placeholder="Disease Suffering"
           required
         />
+         {/* Doctor_Name: <input
+          type="text"
+          id="Doctor_name"
+          placeholder={`${JSON.stringify(DoctorId)}`}
+          required
+        /> */}
+      
         Veterinary_Appointment: <input
           type="date"
           id="veterinary_appointment"
@@ -133,4 +164,3 @@ const Client = () => {
   )
 }
 
-export { Client } 
