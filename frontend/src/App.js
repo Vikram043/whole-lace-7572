@@ -1,21 +1,20 @@
+import React from 'react'
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import Dashboard from './pages/Dashboard'
-// import Layout from './components/shared/Layout.jsx'
-// import Products from './pages/Products'
-
+import {Route,BrowserRouter as Router, Routes} from 'react-router-dom' 
+import Home from './Pages/Home'
+import AboutPage from './Pages/AboutPage';
+import Login from './Pages/Login';
+import Profile from './Pages/Profile';
 function App() {
-    return (
-        <Router>
-            {/* <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Dashboard />} />
-                    <Route path="products" element={<Products />} />
-                </Route>
-                <Route path="/register" element={<div>Register</div>} />
-            </Routes> */}
-        </Router>
-    )
+  return (
+    <Router>
+      <Routes>
+        <Route exact path='/' Component={Home} />
+        <Route path='/profile' Component={Profile}/>
+        <Route path='/about' Component={AboutPage}/>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App
