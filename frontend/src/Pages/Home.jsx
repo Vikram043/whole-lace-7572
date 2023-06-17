@@ -2,10 +2,9 @@ import React from 'react'
 
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import Pet from './Pet'
 import '../Style/CssHome.css'
 import {Link} from 'react-router-dom'
-export default function home() {
+export default function Home() {
   let doctorData=[{
     id:1,
     name:"DR. Avinash Mohan Dev",
@@ -97,10 +96,10 @@ export default function home() {
             <div>
             <img src={ele.img} alt="" />
             <p>{ele.category}</p>
-            <button  >check out</button>
-            <Link to={`/Pet/${ele.id}`}>
-            <button>check out</button>
-            </Link>
+           
+            <Link to={`/Pet/${ele.id}`}> 
+             <button>check out</button> 
+            </Link> 
           </div>
           )
         })

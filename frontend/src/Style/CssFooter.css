@@ -1,4 +1,4 @@
-#footerDiv {
+/* #footerDiv {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -38,4 +38,79 @@
     height: 50px;
   }
   
-  
+   */
+
+   /* CssFooter.css */
+#footerDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 5px;
+  width: 40%
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+.buttonContainer button {
+  border: none;
+  background: none;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.buttonContainer button img {
+  width: 30px;
+  height: 30px;
+}
+
+.buttonContainer button:hover {
+  transform: scale(1.2);
+}
+
+.contactContainer {
+  text-align: right;
+}
+
+.contactContainer p {
+  margin-bottom: 0;
+}
+
+/* Animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#footerDiv {
+  animation: fade-in 0.5s ease;
+}
+
+#media img{
+  /* display: flex; */
+  height: 35px;
+  width: 37px;
+}

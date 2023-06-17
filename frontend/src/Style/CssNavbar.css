@@ -1,38 +1,49 @@
 
-#Nav{
+/* #Nav{
     background-color: purple;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-}
-.logo, #profilePic{
-    height: 30px;
+    padding: 0px 30px;
+} */
+/* .logo{
+    height: 5px;
     display: flex;
     text-align: center;
     justify-content: center;
-    /* margin-top: 20px; */
-}
-#searchLogin-btn{
-    /* margin-top: 20px; */
+} */
+/* #searchLogin-btn{
+    margin-top: 20px;
     width: 40%;
     height: 40px;
-}
+} */
 
-#profile{
+/* #profile{
     color: black;
-    width: 25%;
-    /* background-color: black; */
+    width: 35%;
     display: flex;
     justify-content: space-around;
-}
-#searchBar{
-    width: 80%;
-}
+} */
 #profilePic{
     margin-top: 8px;
     height: 55px;
-    border-radius: 30%;
+    width: 55px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 button{
     border-radius: 5%;
 }
+
+#Nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
