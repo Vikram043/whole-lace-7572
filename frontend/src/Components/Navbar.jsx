@@ -36,7 +36,7 @@ export default function Navbar() {
       {isAuth ? (
           <>
             <li>
-              <span>Welcome, {loggedInUsername}!</span>
+              <span>Hi, {loggedInUsername}!</span>
             </li>
               <button onClick={handleLogout}>Logout</button>
           </>

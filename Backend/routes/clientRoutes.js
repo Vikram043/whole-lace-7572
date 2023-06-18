@@ -53,9 +53,10 @@ clientRouter.post("/details", async (req, res) => {
       subject: "Appointment Confirmation",
       text: "Thank you for booking the appointment.",
       html: `<p>Thank you for booking the appointment.</p>
-         <p>Your appointment is scheduled on: ${formattedDay}, ${formattedDate}</p>`,
+             <p>Doctor's Name: ${DoctorId}</p>
+             <p>Your appointment is scheduled on: ${formattedDay}, ${formattedDate}</p>`,
     };
-
+    
     // Send email to the doctor
     const doctorEmailData = {
       from: "chauhanrohit716@gmail.com",
