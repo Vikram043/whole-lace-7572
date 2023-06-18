@@ -3,19 +3,19 @@ import React from 'react'
 import '../Style/CssFooter.css'
 export default function Footer() {
   let mediaData=[{
-    img:"https://lh3.googleusercontent.com/PxlTITdvAq-gLp6Pi_dcQZh6dvw6T4HsK7sH4gJ5fTFo0sWkVR0i8OI-H6CHYAt0nmwYwGespDuhfPDehQXQt9dClA=w640-h400-e365-rj-sc0x00ffffff",
+    img:"https://www.linkpicture.com/q/youtube_1.png",
     link:"https://www.youtube.com/@PetCareujjwal"
   },
   {
-    img:"https://robots.net/wp-content/uploads/2020/03/Photo-by-Tumisu-1-1-600x595.jpg",
+    img:"https://www.linkpicture.com/q/instagram_65.png",
     link:"https://www.instagram.com/zoetispetcare/"
   },
   {
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiGr0Vsh8v462eX_DiahmbC58_-CgK-MwASA&usqp=CAU",
+    img:"https://www.linkpicture.com/q/facebook_19.png",
     link:"https://www.facebook.com/groups/692556975452740"
   },
   {
-    img:"",
+    img:"https://www.linkpicture.com/q/twitter_13.png",
     link:""
   }]
   return (
@@ -43,13 +43,22 @@ export default function Footer() {
           })
         }
       </div>
-      <div>
+      <div id='support'>
+        <h2>Support us:</h2>
+        <p>Pet veterinarians play a crucial role in ensuring the health and well-being of animals, providing expert medical care and guidance to pet owners. Their dedication and expertise contribute to the happiness and longevity of our beloved furry companions.  
+        </p>
+      </div>
+      <div id="vetsection">
+        <h2>Pet Veterinary:</h2>
+        <p>Our experienced team of pet veterinarians provides comprehensive medical care and ensures the well-being of your beloved pets.</p>
+      </div>
+      <div id="aboutsection">
         <h2>Contact us:</h2>
         <p>Email:</p>
-        <p>      caretaker@gmail.com</p>
+        <p>      petcare@gmail.com</p>
         <p>Phone:</p>
-        <p>      098776543210</p>
-        <p>      098776543211</p>
+        <p> +91 8950937997</p>
+        <p> +91 9845712482</p>
         
       </div>
     </div>

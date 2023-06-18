@@ -1,83 +1,92 @@
-/* Common Styles */
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+/* CssHome.css */
+
+/* Navbar */
+#banner {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top:100px;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  margin:40px;
+}
+
+#docData-div,
+#petData-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  margin-bottom: 40px;
+}
+
+#docData-div div,
+#petData-div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#docData-div img,
+#petData-div img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#docData-div p,
+#petData-div p {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+#petData-div button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#petData-div button:hover {
+  background-color: #0056b3;
+}
+
+#petData-div a {
+  text-decoration: none;
+}
+
+#newimg img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #docData-div,
+  #petData-div {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Banner Styles */
-  #banner {
-    width: 100%;
-  }
-  
-  /* Doctor Details Styles */
-  #docData-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  #docData-div div {
-    flex-basis: 20%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  #docData-div img {
+
+  #docData-div img,
+  #petData-div img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
   }
-  
-  #docData-div p {
-    margin-bottom: 5px;
+
+  h1 {
+    font-size: 20px;
   }
-  
-  /* Pet Details Styles */
-  #petData-div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  
-  #petData-div div {
-    text-align: center;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border-radius: 10px;
-  }
-  
-  #petData-div img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  #petData-div p {
-    margin-bottom: 5px;
-  }
-  
-  button {
-    background-color: #f1f1f1;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #ccc;
-  }
-  
+}

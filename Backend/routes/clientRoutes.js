@@ -21,7 +21,9 @@ clientRouter.post("/details", async (req, res) => {
     address,
     pet_category,
     disease_suffering,
-    veterinary_appointment
+    veterinary_appointment,
+    DoctorId,
+    DoctorEmail,
   
   } = req.body;
 
@@ -34,7 +36,9 @@ clientRouter.post("/details", async (req, res) => {
       address,
       pet_category,
       disease_suffering,
-      veterinary_appointment
+      veterinary_appointment,
+      DoctorId,
+      DoctorEmail,
     });
 
     await client.save();
@@ -67,7 +71,7 @@ clientRouter.post("/details", async (req, res) => {
     // Send email to the doctor
     const doctorEmailData = {
       from: "chauhanrohit716@gmail.com",
-      to: "venkat88676@gmail.com",
+      to: `${DoctorEmail}`,
       subject: "New Appointment",
       text: "A new appointment has been booked.",
       html: `<p>A new appointment has been booked.</p>
