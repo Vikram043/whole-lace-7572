@@ -1,28 +1,102 @@
-*{
-    /* background-color: black; */
-    /* color:purple; */
-    padding: 0;
-    margin: 0;
-}
+/* ClientCss.css */
 
 .overall {
     display: flex;
-    width:100%;
-}
-
-.registerform {
-    display:grid;
-    grid-template-columns: repeat(1,1fr);
-    width:50%;
-    padding-left:20px;
-
-}
-
-.wallp img {
-    width:100%;
-    /* border:2px solid black; */
-}
-
-h1 {
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .registerform {
+    width: 400px;
+    padding: 20px;
+    background-color: rgb(191, 237, 255);
+    border-radius: 35px;
+    margin-left: 20px;
+  }
+  
+  .registerform input[type='text'],
+  .registerform input[type='number'],
+  .registerform select,
+  .registerform input[type='date'] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    box-sizing: border-box;
+    
+  }
+  
+  .registerform button {
+    background-color: goldenrod;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .registerform button:hover {
+    opacity: 0.8;
+  }
+  
+  .wallp {
+    width: 65%;
+    /* height: 400px; */
+    margin-left: 20px;
+  }
+  
+  .wallp img {
+    width: 91%;
+    height: 90vh;
+    object-fit: cover;
+    margin-top: -100px;
+    /* margin-left: 60px; */
+  }
+  
+  #h1new, #h2new {
     text-align: center;
-}
+    margin-bottom: 20px;
+  }
+  
+  #h1new {
+    margin-top: 30px;
+  }
+  
+  #h2new {
+    margin-bottom: 30px;
+  }
+  
+  #h1new, #h2new {
+    color: #333;
+  }
+  
+  /* #Nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+  } */
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  #profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  #userName {
+    margin: 0 10px;
+  }
+  
+  
