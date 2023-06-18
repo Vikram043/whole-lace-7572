@@ -5,13 +5,15 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  color: #fff;
+  color: green;
   padding: 15px;
   width: 100%;
   position: fixed;
   margin-top: -90px;
+  font-weight: bolder;
   /* margin-bottom: 200px; */
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;}
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
 
 .logo {
   width: 150px;
@@ -44,14 +46,14 @@ button {
 
 #login-btn {
   background-color: #4287f5;
-  color: white;
+  /* color: white; */
   padding: 8px 16px;
   border-radius: 4px;
 }
 
 #login-btn:hover {
 background-color: rgb(95, 138, 11);
-color: white;
+/* color: white; */
 }
 
 button:hover {

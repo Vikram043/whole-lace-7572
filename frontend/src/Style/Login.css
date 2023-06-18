@@ -5,7 +5,7 @@ body{
     align-items: center;
   }
   
-  form {
+  #form {
     height: auto;
     width: 320px;
     border: 2px solid black;
@@ -17,8 +17,8 @@ body{
      
   }
   
-  form>div{
-    margin-top: 15px;
+  #form>div{
+    margin-top: 15px;padding:10px;
     padding-left: 20px;
     position:relative
   }
