@@ -3,8 +3,10 @@ import React from 'react'
 // import Footer from "../Components/Footer"
 import { Link } from 'react-router-dom'
 import { useState,useEffect } from 'react'
-
 import "../Style/doctor.css"
+import Navbar from '../Components/Navbar'
+
+
 export default function Doctor() {
   const [data, setData] = useState([])
   const [filterData, setFilterData] = useState([])
@@ -22,7 +24,9 @@ export default function Doctor() {
  
   return (
     <div>
-      <h2>Navigation..</h2>
+      <h1>hello</h1>
+      <Navbar/>
+      <h2>hello</h2>
       <select id="select-pet"onChange={(event)=>{
         console.log(event.target.value)
         if(event.target.value==="all")

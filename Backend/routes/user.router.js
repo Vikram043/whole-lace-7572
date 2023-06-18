@@ -47,7 +47,7 @@ userRouter.post("/login", async (req, res) => {
                     res.cookie('refresh_token', refresh_token);
                     //........................................................
 
-                    res.send({ "msg": "Login successful", "token": token ,"refresh_token":refresh_token})
+                    res.send({ "msg": "Login successful", "token": token ,"refresh_token":refresh_token,"Username":user[0].name})
                 } else {
                     res.send("wrong credentials")
                 }
