@@ -11,19 +11,19 @@ import Doctor from './Pages/Doctor';
 import Client from './Pages/Client';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
-import AdminLogin from './Components/AdminLogin';
-import DoctorLogin from './Components/DoctorLogin';
+import Home from './Pages/Home.jsx'
+// import AdminLogin from './Components/AdminLogin';
+// import DoctorLogin from './Components/DoctorLogin';
 
 
 function App() {
-    return ( 
-
-
+    return (
         <Router>
             <Routes>
-                <Route path="/client" element={<Client />} />
-                <Route path="/doctor" element={<Doctor />} />
-                <Route path="/admin" element={<Layout />}>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/client" element={<Client/>}/>
+                <Route path="/doctor" element={<Doctor/>}/>
+                <Route path="/admin" element={<Layout/>}>
                     <Route path='/admin' element={<Dashboard />} />
                     <Route path="products" element={<Products />} />
                     <Route path="/admin/stafs" element={<Stafs />} />
@@ -34,7 +34,8 @@ function App() {
                     <Route path="/admin/support" element={<Products/>} />
                     <Route path="/admin/profile" element={<Profile/>} />
                 </Route>
-                <Route path="/register" element={<div>Register</div>} />
+                <Route path="/user/signup" element={<Signup/>} />
+                <Route path="user/login" element={<Login/>} />
             </Routes>
          </Router>
     );
