@@ -8,7 +8,7 @@ import { useState,useEffect } from 'react'
 
 
 export default function Client() {
-  const [clientName, setClientName] = useState('');
+  const [client_name, setClientName] = useState('');
   const [contact, setContact] = useState('');
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
@@ -20,11 +20,13 @@ export default function Client() {
   // const [data, setData] = useState([])
 
   const DoctorId=JSON.parse(localStorage.getItem("key"))
+  const DoctorEmail=JSON.parse(localStorage.getItem("key"))
+
 
 
   const handleSubmit = () => {
     const payload = {
-      clientName,
+      client_name,
       contact,
       email,
       address,
@@ -32,7 +34,9 @@ export default function Client() {
       disease_suffering,
       DoctorId:DoctorId,
       veterinary_appointment,
-    }
+      DoctorId: `${DoctorId}`,
+      DoctorEmail:`${DoctorEmail}`
+        }
 
     
       
@@ -62,7 +66,7 @@ export default function Client() {
     })
       .then(res => {
         console.log(res);
-        alert("Thank you for booking the appointment!");
+        alert("Thank you for booking. Your email has been send.");
       })
       .catch(err => {
         console.log(err);
@@ -76,14 +80,15 @@ export default function Client() {
       <h2>Doctor's Name:-{JSON.stringify(DoctorId)}</h2>
       <div className="overall">
       <div className="registerform">
-        clientName: <input
+      client_name: <input
           type="text"
-          id="clientName"
-          value={clientName}
+          id="client_name"
+          value={client_name}
           onChange={(e) => setClientName(e.target.value)}
-          placeholder="clientName"
+          placeholder="client_name"
           required
         />
+        {/* console.log(client_name) */}
         Contact: <input
           type="number"
           id="contact"
