@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {  faLock } from '@fortawesome/free-solid-svg-icons';
-import { Link } from "react-router-dom"
+import { Link ,useNavigate} from "react-router-dom"
 import "../Style/Login.css"
 
 const DoctorLogin = () => {
+    const navigate=useNavigate()
     const [inputValue, setInputValue] = useState('');
 
     const [formData, setFormData] = useState({
@@ -103,6 +104,7 @@ const DoctorLogin = () => {
                 if (response.ok) {
                     // Process the response and handle successful login
                     alert('Login successful')
+                    navigate('/doctor')
                     console.log('Login successful');
                 } else {
                     // Handle login error

@@ -4,7 +4,7 @@
 // import { useState } from "react"
 import "./ClientCss.css";
 import { useState,useEffect } from 'react'
-
+import Navbar from "../Components/Navbar";
 
 
 export default function Client() {
@@ -75,6 +75,8 @@ export default function Client() {
   }
   return (
     <>
+    <h1>Hello</h1>
+    <Navbar/>
       <h1>booking appointment</h1>
       <h2>Doctor's Name:- {DoctorId.name}</h2>
       <div className="overall">
