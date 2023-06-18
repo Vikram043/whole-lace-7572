@@ -19,6 +19,7 @@
   width: 150px;
   height: auto;
   margin-right: 20px;
+  margin-top: 20px;
 }
 
 #profile {
@@ -38,7 +39,6 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: black;
   font-size: 16px;
   margin-right: 10px;
   font-weight: bolder;
