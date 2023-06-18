@@ -1,27 +1,33 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Layout from './components/shared/Layout';
-// import Dashboard from './pages/Dashboard';
-// import Products from './pages/Products';
+import Dashboard from './Pages/Dashboard'
+import Layout from './Components/shared/Layout.jsx'
+import Products from './Pages/Products'
+import Stafs from './Pages/Stafs'
+import Clients from './Pages/Clients'
+import Profile from './Pages/Profile'
 import Doctor from './Pages/Doctor';
 import Client from './Pages/Client';
 
 function App() {
-    return (
-       
-
+    return ( 
         <Router>
-        
-        //     <Routes>
-        //       {/* <Route path="/" element={<Dashboard />} /> */}
-        //       {/* <Route path="/products" element={<Products />} /> */}
-         {/* <Route path="/doctor" element={<Doctor />} /> */}
-                 <Route path="/client" element={<Client />} />
-        //        <Route path="/doctor" element={<Doctor />} />
-        //      
-        //   
-        //       {/* <Route path="/register" element={<div>Register</div>} /> */}
-        //     </Routes>
+            <Routes>
+                <Route path="/client" element={<Client />} />
+                <Route path="/doctor" element={<Doctor />} />
+                <Route path="/admin" element={<Layout />}>
+                    <Route path='/admin' element={<Dashboard />} />
+                    <Route path="products" element={<Products />} />
+                    <Route path="/admin/stafs" element={<Stafs />} />
+                    <Route path="/admin/Clients" element={<Clients />} />
+                    <Route path="/admin/transactions" element={<Products/>} />
+                    <Route path="/admin/messages" element={<Products/>} />
+                    <Route path="/admin/settings" element={<Products/>} />
+                    <Route path="/admin/support" element={<Products/>} />
+                    <Route path="/admin/profile" element={<Profile/>} />
+                </Route>
+                <Route path="/register" element={<div>Register</div>} />
+            </Routes>
          </Router>
     );
 }
