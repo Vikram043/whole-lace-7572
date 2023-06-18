@@ -4,9 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #333;
-  color: #fff;
-  padding: 40px;
+  /* background-color: #333; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;  padding: 40px;
   position: relative; /* Added position */
  
 }
@@ -21,13 +20,13 @@ h2 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #fff;
+  /* color: #fff; */
 }
 
 p {
   font-size: 16px;
   margin-bottom: 5px;
-  color: #fff;
+  /* color: #fff; */
   width:90%;
 }
 
@@ -75,7 +74,7 @@ button:hover {
 
 #aboutsection {
   margin-top: 20px;
-  color: #fff;
+  /* color: #fff; */
   /* flex-basis: 25%; */
   /* border: 2px solid red; */
   /* padding-left: 20px; */
@@ -83,13 +82,13 @@ button:hover {
 }
 
 #aboutsection h2 {
-  color: #fff;
+  /* color: #fff; */
   margin-top: 0;
 }
 
 #aboutsection p {
   margin: 5px 0;
-  color: #fff;
+  /* color: #fff; */
 }
 
 

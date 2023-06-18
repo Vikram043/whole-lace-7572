@@ -147,7 +147,7 @@ const UserLogin = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form id="form" onSubmit={handleSubmit}>
             <div>
                 <h2>Login Form</h2>
             </div>
@@ -156,7 +156,7 @@ const UserLogin = () => {
                 <input className="form-input"  type="text" id="email" name="email" value={formData.email} onChange={handleChange} />
                 <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} /> Email</label>
                 <span className="error-message">{errors.emailError}</span>
-            </div>
+            </div> <br/>
             <div>
                 {/* <label htmlFor="password">Password</label> <br/> */}
                 <input className="form-input" type="password" id="password" name="pass" value={formData.password} onChange={handleChange} />
@@ -171,11 +171,10 @@ const UserLogin = () => {
 
             <div id="links">
                 <p style={{color:"red"}}>Not a member? <Link className='link' to="/user/signup">Signup now</Link></p>
-                <p style={{color:"red"}}>Are you a Admin? <Link className='link' to="/admin/login">Login here</Link></p>
-                <p style={{color:"red"}}>Are you a Doctor? <Link className='link' to="/doctor/login">Login here</Link></p>
+               <br/> <p style={{color:"red"}}>Are you a Admin? <Link className='link' to="/admin/login">Login here</Link></p>
+               <br/> <p style={{color:"red"}}>Are you a Doctor? <Link className='link' to="/doctor/login">Login here</Link></p>
             </div>
 
-            <br />
            
         </form>
     );

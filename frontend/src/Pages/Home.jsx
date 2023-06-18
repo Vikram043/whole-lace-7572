@@ -70,13 +70,13 @@ export default function home() {
       {/* Banner Image */}
       <img id='banner' src="https://wallpapers.com/images/hd/veterinary-cartoon-graphic-art-bu870jgkmy5se8ky.jpg" alt="banner" />
       {/* Doctors details */}
-      
-      <div id="newimg">
-          <img src="https://www.linkpicture.com/q/desk.png" alt="" />
-          <img src="https://www.linkpicture.com/q/2023-06-18-1.png" alt=' ' />
-         </div>
 
-         <div>
+      <div id="newimg">
+        <img src="https://www.linkpicture.com/q/desk.png" alt="" />
+        <img src="https://www.linkpicture.com/q/2023-06-18-1.png" alt=' ' />
+      </div>
+
+      <div id="doctor-details">
         <h1>Doctors Details</h1>
       </div>
       <div id='docData-div'>
@@ -110,7 +110,7 @@ export default function home() {
               </div>
             )
           })
-        } 
+        }
       </div>
       <Footer />
     </div>

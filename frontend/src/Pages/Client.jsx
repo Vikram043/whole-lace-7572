@@ -2,7 +2,7 @@
 
 
 // import { useState } from "react"
-import "./ClientCss.css";
+import "../Style/ClientCss.css";
 import { useState,useEffect } from 'react'
 import Navbar from "../Components/Navbar";
 
