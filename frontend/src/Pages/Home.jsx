@@ -73,7 +73,7 @@ export default function home() {
       
       <div id="newimg">
           <img src="https://www.linkpicture.com/q/desk.png" alt="" />
-          <img src="https://www.linkpicture.com/q/2023-06-18-1.png" />
+          <img src="https://www.linkpicture.com/q/2023-06-18-1.png" alt=' ' />
          </div>
 
          <div>

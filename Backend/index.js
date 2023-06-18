@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.use(cookieParser());
 app.use("/user", userRouter)
-app.use(authenticate)
+//app.use(authenticate)
 app.use("/users", clientRouter);
 app.use("/doctor", docRouter);
 

@@ -32,7 +32,6 @@ export default function Client() {
       address,
       pet_category,
       disease_suffering,
-      DoctorId:DoctorId,
       veterinary_appointment,
       DoctorId: `${DoctorId}`,
       DoctorEmail:`${DoctorEmail}`
