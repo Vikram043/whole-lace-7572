@@ -18,7 +18,11 @@ import AppContextProvider from './Contest/AppContext';
 import Navbar from './Components/Navbar';
 import AdminLogin from './Components/AdminLogin';
 import DoctorLogin from './Components/DoctorLogin';
-
+import TransactionPage from './Pages/Trasaction';
+import MessagePage from './Pages/Message';
+import AdminSettingsPage from './Pages/AdminSetting';
+import Help from './Pages/Help'
+import AdminStaffEdit from './Pages/AdminStaffEdit';
 function App() {
     return (
         <AppContextProvider>
@@ -33,10 +37,11 @@ function App() {
                     <Route path="products" element={<Products />} />
                     <Route path="/admin/stafs" element={<Stafs />} />
                     <Route path="/admin/Clients" element={<Clients />} />
-                    <Route path="/admin/transactions" element={<Products/>} />
-                    <Route path="/admin/messages" element={<Products/>} />
-                    <Route path="/admin/settings" element={<Products/>} />
-                    <Route path="/admin/support" element={<Products/>} />
+                    <Route path="/admin/transactions" element={<TransactionPage/>} />
+                    <Route path="/admin/messages" element={<MessagePage/>} />
+                    <Route path="/admin/settings" element={<AdminSettingsPage/>} />
+                    <Route path="/admin/setting" element={<AdminStaffEdit/>} />
+                    <Route path="/admin/support" element={<Help/>} />
                     <Route path="/admin/profile" element={<Profile/>} />
                 </Route>
                 <Route path="/user/signup" element={<Signup/>} />

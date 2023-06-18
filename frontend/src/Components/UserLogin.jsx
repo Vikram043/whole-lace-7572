@@ -20,7 +20,7 @@ const UserLogin = () => {
         username: '',
         email: '',
         pass: '',
-       
+        
     });
 
     const [errors, setErrors] = useState({

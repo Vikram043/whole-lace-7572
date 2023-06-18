@@ -2,14 +2,16 @@ import React from 'react';
 import '../Style/CssNavbar.css';
 import { useContext,useState,useEffect } from 'react';
 import { AppContext } from '../Contest/AppContext';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 export default function Navbar() {
+  const navigate=useNavigate()
   const { authState, logoutUser } = useContext(AppContext);
   const { isAuth, username } = authState;
   const [loggedInUsername, setLoggedInUsername] = useState('');
 
   const handleLogout = () => {
     logoutUser();
+    navigate('/')
   };
 
   useEffect(() => {

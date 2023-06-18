@@ -1,6 +1,26 @@
 import React from 'react';
-
+import { useContext,useState,useEffect } from 'react';
+import { AppContext } from '../Contest/AppContext';
+import { useNavigate,Link } from 'react-router-dom';
 const Profile = () => {
+  const navigate=useNavigate()
+  const { authState, logoutUser } = useContext(AppContext);
+  const { isAuth, username } = authState;
+  const [loggedInUsername, setLoggedInUsername] = useState('');
+
+  const handleLogout = () => {
+    logoutUser();
+    navigate('/')
+  };
+
+  useEffect(() => {
+    if (isAuth) {
+      setLoggedInUsername(username);
+    } else {
+      setLoggedInUsername('');
+    }
+  }, [isAuth, username]);
+
   return (
     <div className="flex bg-gray-100">
       <div className="bg-white rounded-lg shadow-lg px-20px p-10">
@@ -9,7 +29,7 @@ const Profile = () => {
           alt="Admin Avatar"
           className="w-32 h-32 rounded-full mx-auto mb-4"
         />
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">Vikram Naik</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-2">{loggedInUsername}</h1>
         <h2 className="text-xl text-gray-600 mb-4">Administrator</h2>
         <div className="flex items-center mb-4">
           <svg
@@ -41,8 +61,13 @@ const Profile = () => {
           </svg>
           <p className="text-gray-700">admin@gmail.com</p>
         </div>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+       <Link to='/admin/settings'>
+       <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
           Edit Profile
+        </button>
+       </Link> 
+        <button onClick={handleLogout}className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+          Log Out
         </button>
       </div>
     </div>
