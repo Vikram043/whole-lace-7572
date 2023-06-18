@@ -8,7 +8,7 @@ export default function Navbar() {
         <img className='logo' src="https://www.linkpicture.com/q/logo-no-background.png" alt="404" />
       </button>
 
-      
+ 
 
       <button onClick={() => window.location.href='/about'}>About</button>
       <button onClick={() => window.location.href='/pet-veterinary'}>Pet Veterinary</button>
