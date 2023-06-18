@@ -9,6 +9,7 @@ import Stafs from './Pages/Stafs'
 import Clients from './Pages/Clients'
 import Profile from './Pages/Profile'
 import Doctor from './Pages/Doctor';
+import ProfileDoc from './Pages/ProfileDoc';
 import Client from './Pages/Client';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/client" element={<Client/>}/>
                 <Route path="/doctor" element={<Doctor/>}/>
+                <Route path="/profiledoc" element={<ProfileDoc />} />
                 <Route path="/admin" element={<Layout/>}>
                     <Route path='/admin' element={<Dashboard />} />
                     <Route path="products" element={<Products />} />
