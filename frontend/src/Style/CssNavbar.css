@@ -46,14 +46,14 @@ button {
 
 #login-btn {
   background-color: #4287f5;
-  /* color: white; */
   padding: 8px 16px;
   border-radius: 4px;
+  
 }
 
 #login-btn:hover {
 background-color: rgb(95, 138, 11);
-/* color: white; */
+color: white;
 }
 
 button:hover {
