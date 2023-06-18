@@ -1,5 +1,7 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+}
 #doc-container{
     width: 90%;
     margin: auto;
@@ -10,23 +12,30 @@
 
 .doc-card{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    padding: 10px;
-    text-align: center;
+    padding: 20px;
+    text-align: justify;
     border-radius: 10px;
   
 }
-.doc-card button{
-    padding: 10px;
-    background-color:#4287f5;
+#viewBtn, #bookBtn{
+    padding: 10px;   
     border: none;
     color: white;
     border-radius: 5px;
-
-
+    margin-left: 20px;
+    
+}
+#viewBtn{
+    background-color:#4287f5;
+}
+#bookBtn{
+    background-color: yellowgreen;
+    /* border: solid red; */
 }
 #avatar{
+    text-align: center;
     height: 200px;
-    width: 270px;
+    width: 300px;
     border-radius: 10px;
 }
 #select-pet{
@@ -40,4 +49,25 @@
     font-size: 20px;
    text-align: center;
     /* text-align: center; */
+}
+
+/* profile page */
+#profile-container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+#docProfile{
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#client-card{
+    width: 50%;
+   
+}
+#client-details{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
 }
