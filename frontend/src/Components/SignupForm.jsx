@@ -1,22 +1,22 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineGoogle } from 'react-icons/ai';
-import "../Style/Login.css"
+import "../Style/cssLogin.css"
 
 const Form = () => {
     const [inputValue, setInputValue] = useState('');
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         pass: '',
-        role:'',
-        confirmPassword:''
-        
+        role: '',
+        confirmPassword: ''
+
     });
 
     const [errors, setErrors] = useState({
@@ -94,8 +94,8 @@ const Form = () => {
             }));
         }
 
-         // If there are no errors, send the form data to the server
-         if (
+        // If there are no errors, send the form data to the server
+        if (
             formData.name !== '' &&
             formData.email !== '' &&
             formData.pass !== '' &&
@@ -135,56 +135,59 @@ const Form = () => {
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormData((prevData) => ({
-          ...prevData,
-          [name]: value
+            ...prevData,
+            [name]: value
         }));
 
         setInputValue(event.target.value);
-      };
+    };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <h2>Signup Form</h2>
-            </div>
-            <div>
-                <select className='form-input' name="role" id="" value={formData.role} onChange={handleChange}>
-                   <option value="">Choose role</option>
-                   <option value="user">User</option>
-                   <option value="admin">Admin</option>
-                   <option value="doctor">Doctor</option>
-                </select>
-            </div>
-            <div>
-                {/* <label htmlFor="username">Username</label> <br/> */}
-                <input className="form-input" type="text" id="username" name="name" value={formData.name} onChange={handleChange} />
-                <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="username"><FontAwesomeIcon icon={faUser} /> Username</label>
-                <span className="error-message">{errors.usernameError}</span>
-            </div>
-            <div>
-                {/* <label htmlFor="email">Email</label> <br/> */}
-                <input className="form-input" type="text" id="email" name="email" value={formData.email} onChange={handleChange} />
-                <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} /> Email</label>
-                <span className="error-message">{errors.emailError}</span>
-            </div>
-            <div>
-                {/* <label htmlFor="password">Password</label> <br/> */}
-                <input className="form-input" type="password" id="password" name="pass" value={formData.pass} onChange={handleChange} />
-                <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="password"> <FontAwesomeIcon icon={faLock} /> Password</label>
-                <span className="error-message">{errors.passwordError}</span>
-            </div>
-             <div>
-                {/* <label htmlFor="confirmPassword">Confirm Password</label> <br/> */}
-                <input className="form-input" type="password" id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
-                <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="confirmPassword"> <FontAwesomeIcon icon={faLock} /> Confirm Password</label>
-                <span className="error-message">{errors.confirmPasswordError}</span>
-            </div> 
-            <div>
-                <input id="signup-btn" type="submit" value="Submit" /> <br /><br/>
-                <button id="google-btn"> < AiOutlineGoogle/>  Continue with Google</button>
-                <p>Alredy have an account?<Link to="/user/login">Login Here</Link></p><br />
-            </div>
-        </form>
+        <div id="parent">
+            <form id="form" onSubmit={handleSubmit}>
+                <div>
+                    <h2>Signup Form</h2>
+                </div>
+                <div>
+                    <select className='form-input' name="role" id="" value={formData.role} onChange={handleChange}>
+                        <option value="">Choose role</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                        <option value="doctor">Doctor</option>
+                    </select>
+                </div>
+                <div>
+                    {/* <label htmlFor="username">Username</label> <br/> */}
+                    <input className="form-input" type="text" id="username" name="name" value={formData.name} onChange={handleChange} />
+                    <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="username"><FontAwesomeIcon icon={faUser} /> Username</label>
+                    <span className="error-message">{errors.usernameError}</span>
+                </div>
+                <div>
+                    {/* <label htmlFor="email">Email</label> <br/> */}
+                    <input className="form-input" type="text" id="email" name="email" value={formData.email} onChange={handleChange} />
+                    <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} /> Email</label>
+                    <span className="error-message">{errors.emailError}</span>
+                </div>
+                <div>
+                    {/* <label htmlFor="password">Password</label> <br/> */}
+                    <input className="form-input" type="password" id="password" name="pass" value={formData.pass} onChange={handleChange} />
+                    <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="password"> <FontAwesomeIcon icon={faLock} /> Password</label>
+                    <span className="error-message">{errors.passwordError}</span>
+                </div>
+                <div>
+                    {/* <label htmlFor="confirmPassword">Confirm Password</label> <br/> */}
+                    <input className="form-input" type="password" id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
+                    <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="confirmPassword"> <FontAwesomeIcon icon={faLock} /> Confirm Password</label>
+                    <span className="error-message">{errors.confirmPasswordError}</span>
+                </div>
+                <div>
+                    <input id="signup-btn" type="submit" value="Submit" /> <br /><br />
+                    {/* <button id="google-btn"> < AiOutlineGoogle /> Continue with Google</button> */}
+                    <button id="google-btn" >Continue with google</button>
+                    <p>Alredy have an account?<Link to="/user/login">Login Here</Link></p><br />
+                </div>
+            </form>
+        </div>
     );
 };
 
