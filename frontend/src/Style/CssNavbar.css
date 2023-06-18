@@ -9,9 +9,9 @@
   padding: 15px;
   width: 100%;
   position: fixed;
-  margin-top: -100px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
+  margin-top: -90px;
+  /* margin-bottom: 200px; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;}
 
 .logo {
   width: 150px;
