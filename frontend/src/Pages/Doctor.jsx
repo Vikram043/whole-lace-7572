@@ -26,7 +26,7 @@ export default function Doctor() {
     <div>
       <h1>hello</h1>
       <Navbar/>
-      <h2>hello</h2>
+      {/* <h2>hello</h2> */}
       <select id="select-pet"onChange={(event)=>{
         console.log(event.target.value)
         if(event.target.value==="all")
