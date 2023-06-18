@@ -1,11 +1,15 @@
-import React, { Fragment } from 'react'
+import React, { Fragment,useContext,useState } from 'react'
 import { Menu, Popover, Transition } from '@headlessui/react'
 import { HiOutlineBell, HiOutlineSearch, HiOutlineChatAlt } from 'react-icons/hi'
+import { AppContext } from '../../Contest/AppContext';
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
 
 export default function Header() {
 	const navigate = useNavigate()
+  const { authState, logoutUser } = useContext(AppContext);
+  const { isAuth, username } = authState;
+  const [loggedInUsername, setLoggedInUsername] = useState('');
 
 	return (
 		<div className="bg-white h-[16px] min-h-[64px] px-4 flex items-center border-b border-gray-200 justify-between">
@@ -86,7 +90,7 @@ export default function Header() {
 								className="h-10 w-10 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center"
 								style={{ backgroundImage: 'url("https://source.unsplash.com/80x80?face")' }}
 							>
-								<span className="sr-only">Vikram</span>
+								<span className="sr-only">Welcome, {loggedInUsername}!</span>
 							</div>
 						</Menu.Button>
 					</div>
@@ -129,6 +133,7 @@ export default function Header() {
 							<Menu.Item>
 								{({ active }) => (
 									<div
+									onClick={() => navigate('/')}
 										className={classNames(
 											active && 'bg-gray-100',
 											'active:bg-gray-200 rounded-sm px-4 py-2 text-gray-700 cursor-pointer focus:bg-gray-200'

@@ -25,5 +25,27 @@ docRouter.post("/add",async(req,res)=>{
     }    
 })
 
+docRouter.patch("/update/:doctorId", async (req, res) => {
+    const doctorId = req.params.doctorId;
+    const payload = req.body;
+    try {
+        await DocModel.findByIdAndUpdate({ _id: doctorId },payload)
+        res.status(200).send({ "msg": "Updated Succesfully!" })
+    } catch (error) {
+        res.status(400).send({ "msg": "error.message" })
+    }
+})
+
+docRouter.delete("/delete/:doctorId", async (req, res) => {
+    const doctorId = req.params.doctorId;
+
+    try {
+        await DocModel.findByIdAndDelete({ _id: doctorId })
+        res.status(200).send({ "msg": "deleted Succesfully!" })
+    } catch (error) {
+        res.status(400).send({ "msg": "error.message" })
+    }
+})
+
 
   module.exports={docRouter}

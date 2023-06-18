@@ -1,6 +1,6 @@
 import React from 'react'
 // import Navbar from "../Components/Navbar"
-// import Footer from "../Components/Footer"
+import Footer from "../Components/Footer"
 import { Link } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import "../Style/doctor.css"
@@ -24,9 +24,11 @@ export default function Doctor() {
  
   return (
     <div>
-      <h1>hello</h1>
+      <p>hello</p>
+      <p>jkf</p>
+      <p>jkf</p>
       <Navbar/>
-      {/* <h2>hello</h2> */}
+
       <select id="select-pet"onChange={(event)=>{
         console.log(event.target.value)
         if(event.target.value==="all")
@@ -37,8 +39,7 @@ export default function Doctor() {
 
          })  
          setFilterData(filterData)
-        }
-           
+        }           
 
       }}>
         <option value="all">Select Pet Type</option>
@@ -54,18 +55,19 @@ export default function Doctor() {
             // {console.log(e[i])}
             <div className='doc-card'>
               <img id='avatar' src={e.img} alt="error" />
-              <h3>{e.name} ({e.specialist})</h3>
+              <p id='doc-name'>{e.name} ({e.specialist})</p>
               <p>Experience:-{e.experience}</p>
               <p>{e.bio}</p>
               <p>Email:- {e.email}</p>
               <p>Rating:- {e.rating}</p>
-              <Link to='/client'><button onClick={() => localStorage.setItem('key', JSON.stringify({ name: e.name, email: e.email }))}>Book Now</button></Link>
+              <Link to='/client'><button id='bookBtn' onClick={() => localStorage.setItem('key', JSON.stringify({ name: e.name, email: e.email }))}>Book Now</button></Link>
               <Link to='/profiledoc'><button id='viewBtn' onClick={()=>localStorage.setItem('key' ,JSON.stringify(e.name))}>View Booking</button></Link> 
             </div>
             )
           })
         }
       </div>
+      <Footer/>
 
     </div>
   )

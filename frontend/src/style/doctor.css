@@ -12,10 +12,15 @@
 
 .doc-card{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    padding: 20px;
+    padding: 10px;
     text-align: justify;
     border-radius: 10px;
   
+}
+#doc-name{
+    font-weight: bolder;
+    color:#4287f5;
+    font-size: larger;
 }
 #viewBtn, #bookBtn{
     padding: 10px;   
@@ -51,18 +56,18 @@
     /* text-align: center; */
 }
 
-/* profile page */
+/*---------- doctor's profile page----------- */
 #profile-container{
     display: flex;
     width: 90%;
     margin: auto;
 }
 #docProfile{
-    width: 50%;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 40%;
 }
 #client-card{
-    width: 50%;
+    margin: auto;
+    width: 40%;
    
 }
 #client-details{
@@ -70,4 +75,13 @@
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
+}
+.title{
+    color: #4287f5;
+}
+#removeBtn{
+    background-color: yellowgreen;
+    color:white;
+    margin-top: 10px;
+    padding: 5px;
 }

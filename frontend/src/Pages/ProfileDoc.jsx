@@ -2,14 +2,13 @@ import React from "react";
 import "../Style/doctor.css";
 
 import { useEffect, useState } from "react";
-
-
-
+import moment from "moment";
 
 const ProfileDoc = () => {
   const docName = JSON.parse(localStorage.getItem("key"));
   const [data, setData] = useState([]);
   const [clientdata, setClientData] = useState([]);
+  const [counter, setcounter] = useState(0)
   useEffect(() => {
     fetch("http://localhost:8000/doctor/")
       .then((res) => res.json())
@@ -33,16 +32,16 @@ const ProfileDoc = () => {
       <h2>Navigation</h2>
       <div id="profile-container">
         <div id="docProfile">
+          <h2 className="title">Doctor's Profile</h2>
           {data.map((e) => {
-            
             if (e.name === docName) {
               return (
                 <div key={e._id}>
                   <div className="doc-card">
                     <img id="avatar" src={e.img} alt="error" />
-                    <h3>
+                    <h2 className="title">
                       {e.name} ({e.specialist})
-                    </h3>
+                    </h2>
                     <p>Experience:-{e.experience}</p>
                     <p>{e.bio}</p>
                     <p>Email:- {e.email}</p>
@@ -54,31 +53,45 @@ const ProfileDoc = () => {
           })}
         </div>
         <div id="client-card">
-       
+          <h2 className="title">Clients Booking Details</h2>
           {clientdata.map((e) => {
-         
             if (e.DoctorId === docName) {
-          
               return (
-                <div  id="client-details" key={e._id}>
-                 
-                  <h4>Client Name:- {e.client_name}</h4>
+                <div id="client-details" key={e._id}>
+                  <h2 className="title">Client Name:- {e.client_name}</h2>
                   <h4>Contact No:- {e.contact}</h4>
                   <h4>Address:- {e.address}</h4>
                   <h4>Email:- {e.email}</h4>
                   <h4>Pet :- {e.pet_category}</h4>
                   <h4>Disease :- {e.disease_suffering}</h4>
-                  <h4>Appointment Data:- {e.veterinary_appointment}</h4>
-
+                  <h4 className="title">
+                    Appointment Data:-{" "}
+                    {moment(e.veterinary_appointment).format("DD-MM-YYYY")}
+                  </h4>
+                  <button
+                    id="removeBtn"
+                    onClick={() => {                      
+                      fetch(
+                        `http://localhost:8000/users/delete/${e._id}`,
+                        {
+                          method: "DELETE",
+                          headers: {
+                            "Content-type": "application/json",
+                          },
+                        }
+                        )
+                        .then((req) => req.json())
+                        .then(() => {
+                          alert("Delete Successfully");
+                          window.location.reload();
+                        });
+                    }}
+                  >
+                    Remove
+                  </button>
                 </div>
               );
             }
-            // if(flag==0){
-            //     return (
-            //         <div>You Have No Bookings</div>
-            //     )
-            // }
-            
           })}
         </div>
       </div>
