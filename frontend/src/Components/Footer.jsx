@@ -30,6 +30,17 @@ export default function Footer() {
         <h2>Partner with Us</h2>
       </div>
       <div>
+        <img src="https://www.linkpicture.com/q/logo-no-background.png" alt="Pet Care" />
+      <video src="https://youtu.be/Mnj5TAmlP9U" autoplay loop controls>Pet Care</video>
+      </div>
+      <div>
+        <h2>Contact us:</h2>
+        <p>Email:</p>
+        <p>      caretaker@gmail.com</p>
+        <p>Phone:</p>
+        <p>      098776543210</p>
+        <p>      098776543211</p>
+        <div id='media'>
         {
           mediaData.map((ele)=>{
             return (
@@ -43,14 +54,6 @@ export default function Footer() {
           })
         }
       </div>
-      <div>
-        <h2>Contact us:</h2>
-        <p>Email:</p>
-        <p>      caretaker@gmail.com</p>
-        <p>Phone:</p>
-        <p>      098776543210</p>
-        <p>      098776543211</p>
-        
       </div>
     </div>
   )

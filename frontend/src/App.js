@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './Pages/Dashboard'
@@ -8,9 +9,16 @@ import Clients from './Pages/Clients'
 import Profile from './Pages/Profile'
 import Doctor from './Pages/Doctor';
 import Client from './Pages/Client';
+import Signup from './Pages/Signup';
+import Login from './Pages/Login';
+import AdminLogin from './Components/AdminLogin';
+import DoctorLogin from './Components/DoctorLogin';
+
 
 function App() {
     return ( 
+
+
         <Router>
             <Routes>
                 <Route path="/client" element={<Client />} />
