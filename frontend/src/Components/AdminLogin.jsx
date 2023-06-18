@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {  faLock } from '@fortawesome/free-solid-svg-icons';
 import { Link ,useNavigate} from "react-router-dom"
-import "../Style/Login.css"
+import "../Style/cssLogin.css"
 
 const AdminLogin = () => {
     const navigate =useNavigate()
@@ -135,7 +135,8 @@ const AdminLogin = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <div id="parent">
+        <form id="form" onSubmit={handleSubmit}>
             <div>
                 <h2>Admin Login Form</h2>
             </div>
@@ -166,6 +167,7 @@ const AdminLogin = () => {
             <br />
            
         </form>
+        </div>
     );
 };
 

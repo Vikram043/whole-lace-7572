@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import {  faLock } from '@fortawesome/free-solid-svg-icons';
-import { Link ,useNavigate} from "react-router-dom"
-import "../Style/Login.css"
+import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from "react-router-dom"
+import "../Style/cssLogin.css"
 
 const DoctorLogin = () => {
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     const [inputValue, setInputValue] = useState('');
 
     const [formData, setFormData] = useState({
@@ -35,7 +35,7 @@ const DoctorLogin = () => {
         return passwordRegex.test(password);
     };
 
-    const handleSubmit = async(event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         // Clear previous error messages
@@ -135,37 +135,39 @@ const DoctorLogin = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <h2>Doctor Login Form</h2>
-            </div>
-            <div>
-                {/* <label htmlFor="email">Email</label> <br/> */}
-                <input className="form-input" type="text" id="email" name="email" value={formData.email} onChange={handleChange} />
-                <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} /> Email</label>
-                <span className="error-message">{errors.emailError}</span>
-            </div>
-            <div>
-                {/* <label htmlFor="password">Password</label> <br/> */}
-                <input className="form-input" type="password" id="password" name="password" value={formData.password} onChange={handleChange} />
-                <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="password"> <FontAwesomeIcon icon={faLock} /> Password</label>
-                <span className="error-message">{errors.passwordError}</span>
-            </div>
- 
-            <div>
-                <input id="signup-btn" type="submit" value="Login" /> <br /><br/>
-                <button id="google-btn">  Continue with Google</button>                
-            </div>
+        <div id="parent">
+            <form id="form" onSubmit={handleSubmit}>
+                <div>
+                    <h2>Doctor Login Form</h2>
+                </div>
+                <div>
+                    {/* <label htmlFor="email">Email</label> <br/> */}
+                    <input className="form-input" type="text" id="email" name="email" value={formData.email} onChange={handleChange} />
+                    <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} /> Email</label>
+                    <span className="error-message">{errors.emailError}</span>
+                </div>
+                <div>
+                    {/* <label htmlFor="password">Password</label> <br/> */}
+                    <input className="form-input" type="password" id="password" name="password" value={formData.password} onChange={handleChange} />
+                    <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="password"> <FontAwesomeIcon icon={faLock} /> Password</label>
+                    <span className="error-message">{errors.passwordError}</span>
+                </div>
 
-            <div id="links">
-                <p>Not a member? <Link className='link' to="/user/signup">Signup now</Link></p>
-                <p>Are you a User? <Link className='link' to="/user/login">Login here</Link></p>
-                <p>Are you a Admin? <Link className='link' to="/Admin/login">Login here</Link></p>
-            </div>
+                <div>
+                    <input id="signup-btn" type="submit" value="Login" /> <br /><br />
+                    <button id="google-btn">  Continue with Google</button>
+                </div>
 
-            <br />
-           
-        </form>
+                <div id="links">
+                    <p>Not a member? <Link className='link' to="/user/signup">Signup now</Link></p>
+                    <p>Are you a User? <Link className='link' to="/user/login">Login here</Link></p>
+                    <p>Are you a Admin? <Link className='link' to="/Admin/login">Login here</Link></p>
+                </div>
+
+                <br />
+
+            </form>
+        </div>
     );
 };
 

@@ -1,17 +1,17 @@
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import {  faLock } from '@fortawesome/free-solid-svg-icons';
-import { Link ,useNavigate} from "react-router-dom";
+import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { AppContext } from '../Contest/AppContext';
 
-import "../Style/Login.css"
+import "../Style/cssLogin.css"
 
 
 
 const UserLogin = () => {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
     const { loginUser } = useContext(AppContext);
     const [inputValue, setInputValue] = useState('');
@@ -20,7 +20,7 @@ const UserLogin = () => {
         username: '',
         email: '',
         pass: '',
-        
+
     });
 
     const [errors, setErrors] = useState({
@@ -97,8 +97,8 @@ const UserLogin = () => {
             }));
         }
 
-         // If there are no errors, perform login authentication
-         if (errors.emailError === '' && errors.passwordError === '') {
+        // If there are no errors, perform login authentication
+        if (errors.emailError === '' && errors.passwordError === '') {
             try {
                 const response = await fetch('http://localhost:8000/user/login', {
                     method: 'POST',
@@ -107,7 +107,7 @@ const UserLogin = () => {
                     },
                     body: JSON.stringify(formData),
                 });
-       
+
                 if (response.ok) {
                     // Process the response and handle successful login
                     const responseData = await response.json();
@@ -143,40 +143,44 @@ const UserLogin = () => {
         }));
 
         setInputValue(event.target.value);
-     
+
     };
 
     return (
-        <form id="form" onSubmit={handleSubmit}>
-            <div>
-                <h2>Login Form</h2>
-            </div>
-            <div>
-                {/* <label htmlFor="email">Email</label> <br/> */}
-                <input className="form-input"  type="text" id="email" name="email" value={formData.email} onChange={handleChange} />
-                <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} /> Email</label>
-                <span className="error-message">{errors.emailError}</span>
-            </div> <br/>
-            <div>
-                {/* <label htmlFor="password">Password</label> <br/> */}
-                <input className="form-input" type="password" id="password" name="pass" value={formData.password} onChange={handleChange} />
-                <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="password"> <FontAwesomeIcon icon={faLock} /> Password</label>
-                <span className="error-message">{errors.passwordError}</span>
-            </div>
- 
-            <div>
-                <input id="signup-btn" type="submit" value="Login" /> <br /><br/>
-                <button id="google-btn"> <  AiOutlineGoogle className='google-icon' />  Continue with Google</button>                
-            </div>
+        <div id="parent">
+            <form id="form" onSubmit={handleSubmit}>
+                <div>
+                    <h2>Login Form</h2>
+                </div>
+                <div>
+                    {/* <label htmlFor="email">Email</label> <br/> */}
+                    <input className="form-input" type="text" id="email" name="email" value={formData.email} onChange={handleChange} />
+                    <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} /> Email</label>
+                    <span className="error-message">{errors.emailError}</span>
+                </div>
+                <div>
+                    {/* <label htmlFor="password">Password</label> <br/> */}
+                    <input className="form-input" type="password" id="password" name="pass" value={formData.password} onChange={handleChange} />
+                    <label className={`form-label ${inputValue !== '' ? 'active' : ''}`} htmlFor="password"> <FontAwesomeIcon icon={faLock} /> Password</label>
+                    <span className="error-message">{errors.passwordError}</span>
+                </div>
 
-            <div id="links">
-                <p style={{color:"red"}}>Not a member? <Link className='link' to="/user/signup">Signup now</Link></p>
-               <br/> <p style={{color:"red"}}>Are you a Admin? <Link className='link' to="/admin/login">Login here</Link></p>
-               <br/> <p style={{color:"red"}}>Are you a Doctor? <Link className='link' to="/doctor/login">Login here</Link></p>
-            </div>
+                <div>
+                    <input id="signup-btn" type="submit" value="Login" /> <br /><br />
+                    <button id="google-btn"> Continue with Google</button>
+                </div>
 
-           
-        </form>
+                <div id="links">
+                    <p >Not a member? <Link className='link' to="/user/signup">Signup now</Link></p>
+                     <p >Are you a Admin? <Link className='link' to="/admin/login">Login here</Link></p>
+                     <p >Are you a Doctor? <Link className='link' to="/doctor/login">Login here</Link></p>
+                </div>
+
+                <br />
+
+
+            </form>
+        </div>
     );
 };
 
