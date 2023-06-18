@@ -1,22 +1,22 @@
 import React from 'react'
-// import DashboardStatsGrid from '../components/DashboardStatsGrid'
-// import TransactionChart from '../components/TransactionChart'
-// import RecentOrders from '../components/RecentOrders'
-// import BuyerProfilePieChart from '../components/BuyerProfilePieChart'
-// import PopularProducts from '../components/PopularProducts'
+import DashboardStatsGrid from '../Components/DashboardStatsGrid'
+import TransactionChart from '../Components/TransactionChart'
+import RecentOrders from '../Components/RecentOrders'
+import BuyerProfilePieChart from '../Components/BuyerProfilePieChart'
+import PopularProducts from '../Components/PopularProducts'
 
 export default function Dashboard() {
 	return (
 		<div className="flex flex-col gap-4">
-			{/* <DashboardStatsGrid />
-			<div className="flex flex-row gap-4 w-full">
+			<DashboardStatsGrid />
+			<div className="flex flex-col sm:flex-row gap-4 w-full">
 				<TransactionChart />
 				<BuyerProfilePieChart />
 			</div>
-			<div className="flex flex-row gap-4 w-full">
+			<div className="flex flex-col sm:flex-row gap-4 w-full">
 				<RecentOrders />
 				<PopularProducts />
-			</div> */}
+			</div>
 		</div>
 	)
 }

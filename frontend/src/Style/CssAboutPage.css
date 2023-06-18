@@ -1,0 +1,68 @@
+.about-page {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .section {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .section-text {
+    line-height: 1.5;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .pet-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .service-list {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .service-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Animation */
+  .about-page {
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
