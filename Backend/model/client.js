@@ -4,7 +4,7 @@ const clientSchema = new mongoose.Schema(
     {
         client_name: {
             type: String,
-            // required: true,
+            required: true,
         },
         contact: {
             type: String,
@@ -34,10 +34,14 @@ const clientSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        // doctorId:{
-        //     type:Number,
-        //     required:true
-        // },
+        DoctorId:{
+            type:String,
+            required:true
+        },
+        DoctorEmail:{
+            type:String,
+            required:true
+        },
         veterinary_appointment: {
             type: Date,
             required: true,

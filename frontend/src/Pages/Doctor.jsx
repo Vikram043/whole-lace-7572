@@ -55,7 +55,7 @@ export default function Doctor() {
               <p>{e.bio}</p>
               <p>Email:- {e.email}</p>
               <p>Rating:- {e.rating}</p>
-              <Link to='/client'><button onClick={()=>localStorage.setItem('key' ,JSON.stringify(e.name))}>Book Now</button></Link> 
+              <Link to='/client'><button onClick={() => localStorage.setItem('key', JSON.stringify({ name: e.name, email: e.email }))}>Book Now</button></Link>
             </div>
             )
           })
