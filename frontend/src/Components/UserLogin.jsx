@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {  faLock } from '@fortawesome/free-solid-svg-icons';
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import { AiOutlineGoogle } from 'react-icons/ai';
+import { AppContext } from '../Contest/AppContext';
+
 import "../Style/Login.css"
 
+
+
 const UserLogin = () => {
+    const navigate=useNavigate();
+
+    const { loginUser } = useContext(AppContext);
     const [inputValue, setInputValue] = useState('');
 
     const [formData, setFormData] = useState({
@@ -105,6 +112,8 @@ const UserLogin = () => {
                     // Process the response and handle successful login
                     const responseData = await response.json();
                     alert('Login successful')
+                    loginUser(responseData.Username)
+                    navigate('/doctor')
                     console.log(responseData);
 
                 } else {
@@ -161,9 +170,9 @@ const UserLogin = () => {
             </div>
 
             <div id="links">
-                <p>Not a member? <Link className='link' to="/user/signup">Signup now</Link></p>
-                <p>Are you a Admin? <Link className='link' to="/admin/login">Login here</Link></p>
-                <p>Are you a Doctor? <Link className='link' to="/doctor/login">Login here</Link></p>
+                <p style={{color:"red"}}>Not a member? <Link className='link' to="/user/signup">Signup now</Link></p>
+                <p style={{color:"red"}}>Are you a Admin? <Link className='link' to="/admin/login">Login here</Link></p>
+                <p style={{color:"red"}}>Are you a Doctor? <Link className='link' to="/doctor/login">Login here</Link></p>
             </div>
 
             <br />

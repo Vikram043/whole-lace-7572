@@ -14,13 +14,15 @@ import Client from './Pages/Client';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Home from './Pages/Home.jsx'
-// import AdminLogin from './Components/AdminLogin';
-// import DoctorLogin from './Components/DoctorLogin';
-
+import AppContextProvider from './Contest/AppContext';
+import Navbar from './Components/Navbar';
+import AdminLogin from './Components/AdminLogin';
+import DoctorLogin from './Components/DoctorLogin';
 
 function App() {
     return (
-        <Router>
+        <AppContextProvider>
+            <Router>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/client" element={<Client/>}/>
@@ -39,8 +41,12 @@ function App() {
                 </Route>
                 <Route path="/user/signup" element={<Signup/>} />
                 <Route path="user/login" element={<Login/>} />
+                <Route path="admin/login" element={<AdminLogin/>} />
+                <Route path="doctor/login" element={<DoctorLogin/>} />
             </Routes>
          </Router>
+        </AppContextProvider>
+        
     );
 }
 
