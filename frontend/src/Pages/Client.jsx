@@ -20,7 +20,7 @@ export default function Client() {
   // const [data, setData] = useState([])
 
   const DoctorId=JSON.parse(localStorage.getItem("key"))
-  const DoctorEmail=JSON.parse(localStorage.getItem("key"))
+  // const DoctorEmail=JSON.parse(localStorage.getItem("key"))
 
 
 
@@ -33,8 +33,8 @@ export default function Client() {
       pet_category,
       disease_suffering,
       veterinary_appointment,
-      DoctorId: `${DoctorId}`,
-      DoctorEmail:`${DoctorEmail}`
+      DoctorId: DoctorId.name,
+      DoctorEmail:DoctorId.email,
         }
 
     
@@ -76,7 +76,7 @@ export default function Client() {
   return (
     <>
       <h1>booking appointment</h1>
-      <h2>Doctor's Name:-{JSON.stringify(DoctorId)}</h2>
+      <h2>Doctor's Name:- {DoctorId.name}</h2>
       <div className="overall">
       <div className="registerform">
       client_name: <input
