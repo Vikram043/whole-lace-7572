@@ -1,0 +1,96 @@
+/* Common styles */
+#container{
+    margin-top: 100px;
+}
+#PetImage {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #pet-data {
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  h1.color-red {
+    color: red;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .text {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 1024px) {
+    #PetImage img {
+      max-width: 700px;
+      max-height: 400px;
+    }
+  
+    #pet-data {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Tablet styles */
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    #PetImage img {
+      max-width: 400px;
+      max-height: 250px;
+    }
+  
+    #pet-data {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    h2 {
+      font-size: 16px;
+    }
+  
+    .text {
+      font-size: 14px;
+    }
+  }
+  
+  /* Mobile styles */
+  @media screen and (max-width: 767px) {
+    #PetImage img {
+      max-width: 300px;
+      max-height: 200px;
+    }
+  
+    #pet-data {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  
+    h1 {
+      font-size: 18px;
+    }
+  
+    h2 {
+      font-size: 14px;
+    }
+  
+    .text {
+      font-size: 12px;
+    }
+  }
+  

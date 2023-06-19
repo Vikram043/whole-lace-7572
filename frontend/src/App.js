@@ -23,16 +23,25 @@ import MessagePage from './Pages/Message';
 import AdminSettingsPage from './Pages/AdminSetting';
 import Help from './Pages/Help'
 import AdminStaffEdit from './Pages/AdminStaffEdit';
-import AboutPage from './Pages/Pet'
-import Pet from './Pages/AboutPage'
-import ContactUs from './Pages/ContactUs'
+
+import AboutPage from "./Pages/AboutPage";
+import PetVeterinary from './Pages/PetVeterinary';
+import Contact from './Pages/Contact';
 import Services from './Pages/Services';
+import Pet from './Pages/Pet';
+
 function App() {
     return (
         <AppContextProvider>
             <Router>
             <Routes>
                 <Route path="/" element={<Home/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
+                <Route path="/pet-veterinary" element={<PetVeterinary/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/services" element={<Services/>}/>
+                <Route path="/Pet" element={<Pet/>}/>
+
                 <Route path="/client" element={<Client/>}/>
                 <Route path="/doctor" element={<Doctor/>}/>
                 <Route path="/profiledoc" element={<ProfileDoc />} />

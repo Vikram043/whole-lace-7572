@@ -13,6 +13,11 @@
   font-weight: bolder;
   /* margin-bottom: 200px; */
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  /* width: 100%; */
+  z-index: 999;
 }
 /* #nav img{
   width:100%;

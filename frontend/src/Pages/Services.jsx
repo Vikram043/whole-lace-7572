@@ -1,47 +1,79 @@
 import React from 'react';
+import '../Style/CssServices.css';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 
-
 const Services = () => {
-  const servicesData = [
-    { id: 1, title: 'Dog Walking', description: 'Enjoy a leisurely walk with your furry friend.' },
-    { id: 2, title: 'Pet Boarding', description: 'Provide a comfortable and safe environment for your pet while you are away.' },
-    { id: 3, title: 'Grooming', description: 'Keep your pet looking clean and stylish with our professional grooming services.' },
-    { id: 4, title: 'Training', description: 'Help your pet learn new skills and improve their behavior through our training programs.' },
+  const services = [
+    {
+      title: 'Dog Grooming',
+      description: 'We offer professional dog grooming services to keep your furry friend looking their best.',
+      icon: '🐾',
+    },
+    {
+      title: 'Pet Boarding',
+      description: 'Our pet boarding service ensures that your pet is well taken care of while you are away.',
+      icon: '🏠',
+    },
+    {
+      title: 'Veterinary Care',
+      description: 'Our experienced veterinarians provide top-notch medical care for your pets.',
+      icon: '⚕️',
+    },
+    {
+      title: 'Pet Training',
+      description: 'We offer training programs to help your pet develop good behavior and obedience skills.',
+      icon: '🎾',
+    },
+    {
+      title: 'Pet Walking',
+      description: 'Our professional pet walkers will ensure that your pets get the exercise they need.',
+      icon: '🚶‍♂️',
+    },
+    {
+      title: 'Pet Sitting',
+      description: 'Our pet sitting service provides in-home care for your pets while you are away.',
+      icon: '🏡',
+    },
+    {
+      title: 'Pet Vaccinations',
+      description: 'We provide comprehensive vaccination services to protect your pets from diseases.',
+      icon: '💉',
+    },
+    {
+      title: 'Pet Dental Care',
+      description: 'Our dental care services help maintain your pet\'s oral health and hygiene.',
+      icon: '🦷',
+    },
+    {
+      title: 'Pet Nutrition',
+      description: 'We offer expert advice on pet nutrition and provide specialized diets for your pets.',
+      icon: '🥦',
+    },
+    {
+      title: 'Pet Spa',
+      description: 'Treat your pet to a luxurious spa experience with our range of pet spa services.',
+      icon: '💅',
+    },
+
   ];
 
   return (
     <div>
-        <p>p</p>
-        <p>p</p>
-        <p> p</p>
         <Navbar/>
-    <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div className="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-          <div className="max-w-md mx-auto">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-8">
-              Our Services
-            </h2>
-            <ul className="space-y-4">
-              {servicesData.map((service) => (
-                <li
-                  key={service.id}
-                  className="px-4 py-6 bg-white shadow rounded-md"
-                >
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </li>
-              ))}
-            </ul>
+    <div className="services">
+      <h1>Our Services</h1>
+      <div className="services-list">
+        {services.map((service, index) => (
+          <div className="service" key={index}>
+            <span className="service-icon">{service.icon}</span>
+            <h2 className="service-title">{service.title}</h2>
+            <p className="service-description">{service.description}</p>
           </div>
-        </div>
+        ))}
       </div>
     </div>
-    <Footer/>
+        <Footer/>
     </div>
   );
 };
