@@ -104,7 +104,7 @@ export default function home() {
                 <img src={ele.img} alt="" />
                 <p>{ele.category}</p>
                 {/* <button  >check out</button> */}
-                <Link to={`/Pet/${ele.id}`}>
+                <Link to={`/Pet`}>
                   <button>View Details</button>
                 </Link>
               </div>

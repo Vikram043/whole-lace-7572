@@ -147,20 +147,21 @@ function Pet(id) {
                 petData.map((ele)=>{
                     return (
                     <div>
-                        <div id='PetImage'>
+                        {/* <div id='PetImage'>
                             <img src={ele.img} alt={ele.name} />
-                        </div>
+                        </div> */}
                         <div id='pet-data'>
                             <h1>{ele.name}</h1>
                             {ele.details.map((data)=>{
                                return (<div>
                                     <h1 style={{color:'red'}}>{data.Diseases}:</h1>
                                     <img src={data.image} alt="404" />
+                                    <h1>Details:</h1>
                                     <text>{data.Details}</text>
                                     <h1>Treatment:</h1>
-                                    <h2>{data.Treatment}</h2>
+                                    <p>{data.Treatment}</p>
                                     <h1>Prevention:</h1>
-                                    <h2>{data.Prevention}</h2>
+                                    <p>{data.Prevention}</p>
                                 </div>
                             )
 
@@ -174,11 +175,7 @@ function Pet(id) {
             <Footer />
 
         </div>
-      </div>
-    </div>
-    <Footer/>
-    </div>
   );
 };
 
-export default AboutUs;
+export default Pet;
