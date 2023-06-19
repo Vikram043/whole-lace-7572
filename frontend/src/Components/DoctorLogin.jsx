@@ -104,7 +104,7 @@ const DoctorLogin = () => {
                 if (response.ok) {
                     // Process the response and handle successful login
                     alert('Login successful')
-                    navigate('/doctor')
+                    navigate('/profiledoc')
                     console.log('Login successful');
                 } else {
                     // Handle login error

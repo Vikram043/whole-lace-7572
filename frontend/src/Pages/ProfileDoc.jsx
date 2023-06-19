@@ -3,12 +3,15 @@ import "../Style/doctor.css";
 
 import { useEffect, useState } from "react";
 import moment from "moment";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const ProfileDoc = () => {
-  const docName = JSON.parse(localStorage.getItem("key"));
+  const docName = JSON.parse(localStorage.getItem("key"))||"Liam Wilson"
+  console.log(docName)
   const [data, setData] = useState([]);
   const [clientdata, setClientData] = useState([]);
-  const [counter, setcounter] = useState(0)
+
   useEffect(() => {
     fetch("https://precious-tan-binturong.cyclic.app/doctor/")
       .then((res) => res.json())
@@ -29,7 +32,10 @@ const ProfileDoc = () => {
   }, []);
   return (
     <div>
-      <h2>Navigation</h2>
+      <p>hello</p>
+      <p>jkf</p>
+      <p>jkf</p>
+      <Navbar/>
       <div id="profile-container">
         <div id="docProfile">
           <h2 className="title">Doctor's Profile</h2>
@@ -95,6 +101,7 @@ const ProfileDoc = () => {
           })}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

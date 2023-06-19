@@ -23,6 +23,10 @@ import MessagePage from './Pages/Message';
 import AdminSettingsPage from './Pages/AdminSetting';
 import Help from './Pages/Help'
 import AdminStaffEdit from './Pages/AdminStaffEdit';
+import AboutPage from './Pages/Pet'
+import Pet from './Pages/AboutPage'
+import ContactUs from './Pages/ContactUs'
+import Services from './Pages/Services';
 function App() {
     return (
         <AppContextProvider>
@@ -32,6 +36,10 @@ function App() {
                 <Route path="/client" element={<Client/>}/>
                 <Route path="/doctor" element={<Doctor/>}/>
                 <Route path="/profiledoc" element={<ProfileDoc />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/pet-veterinary" element={<Pet />} />
+                <Route path="/contact" element={<ContactUs />} />
+                <Route path="/services" element={<Services />} />
                 <Route path="/admin" element={<Layout/>}>
                     <Route path='/admin' element={<Dashboard />} />
                     <Route path="products" element={<Products />} />
