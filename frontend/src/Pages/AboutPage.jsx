@@ -5,9 +5,11 @@ import Footer from '../Components/Footer';
  function AboutPage() {
   return (
     <div>
+      <p>hoo</p>
+      <p>hoo</p>
+      <p>p</p>
       <Navbar/>
     <div className="about-page">
-      <h1 className="title">About Us</h1>
       <div className="content">
         <div className="section">
           <h2 className="section-title">Dogs</h2>

@@ -66,7 +66,7 @@ const Profile = () => {
           Edit Profile
         </button>
        </Link> 
-        <button onClick={handleLogout}className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+        <button onClick={handleLogout}className="bg-blue-500 hover:bg-blue-600 ml-px text-white font-semibold py-2 px-4 rounded">
           Log Out
         </button>
       </div>

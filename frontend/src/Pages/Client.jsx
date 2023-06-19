@@ -6,9 +6,10 @@ import "../Style/ClientCss.css";
 import { useState} from 'react'
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-
+import { useNavigate } from "react-router-dom";
 
 export default function Client() {
+  const navigate=useNavigate()
   const [client_name, setClientName] = useState('');
   const [contact, setContact] = useState('');
   const [email, setEmail] = useState('');
@@ -67,6 +68,7 @@ export default function Client() {
       .then(res => {
         console.log(res);
         alert("Thank you for booking. Your email has been send.");
+        navigate('/')
       })
       .catch(err => {
         console.log(err);

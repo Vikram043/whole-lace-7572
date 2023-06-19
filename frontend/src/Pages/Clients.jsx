@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { format } from 'date-fns';
-import { Link, useLocation } from 'react-router-dom';
-import { getOrderStatus } from '../lib/helpers';
+import { Link} from 'react-router-dom';
 
 export default function Clients() {
   const [recentOrderData, setRecentOrderData] = useState([]);
-  const location = useLocation();
+
 
   useEffect(() => {
     const fetchData = async () => {
