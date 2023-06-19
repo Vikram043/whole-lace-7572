@@ -1,0 +1,88 @@
+.pet-veterinary {
+    padding: 20px;
+    margin-top: 135PX;
+    margin-bottom: 20PX;
+    background-color: #F7F5F9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pet-veterinary-header {
+    margin-bottom: 30px;
+  }
+  
+  .pet-veterinary-header h1 {
+    color: #3F3D56;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .pet-veterinary-header p {
+    color: #6C757D;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .pet-veterinary-details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .pet-veterinary-services {
+    flex: 1;
+    margin-bottom: 30px;
+  }
+  
+  .pet-veterinary-services h2 {
+    color: #3F3D56;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .pet-veterinary-services ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .pet-veterinary-services li {
+    margin-bottom: 10px;
+  }
+  
+  .pet-veterinary-services li:before {
+    content: '•';
+    color: #6C757D;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  .pet-veterinary-services li h3 {
+    color: #3F3D56;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .pet-veterinary-services li p {
+    color: #6C757D;
+    font-size: 14px;
+    margin-top: 0;
+  }
+  
+  .pet-veterinary-additional {
+    flex: 1;
+    margin-bottom: 30px;
+    font-style: italic;
+  }
+  
+  .pet-veterinary-additional h2 {
+    color: #3F3D56;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .pet-veterinary-additional p {
+    color: #6C757D;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  

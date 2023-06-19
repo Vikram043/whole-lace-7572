@@ -26,7 +26,9 @@ export default function Footer() {
         <p>We are the pet care. We take care of pets, we solves the pets prolems. We love to save pets and help them to recover from any 
           kind of Disease.  
         </p>
+        <button onClick={()=>{window.location.href='/services'}}>
         <h2>Services</h2>
+        </button>
         <h2>Partner with Us</h2>
       </div>
       <div>
