@@ -9,7 +9,7 @@ https://happy-pet-care.netlify.app/
 
 # Pet Care Application
 
-![Pet Care](https://example.com/pet-care.png)
+![landing page](https://i.pinimg.com/736x/23/05/0c/23050cdce12d2968280e571276f65cdb.jpg)"
 
 This is a full-stack web application for managing pet care services. It is built using React, Node.js, Express, and Tailwind CSS.
 
