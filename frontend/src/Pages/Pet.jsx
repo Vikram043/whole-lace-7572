@@ -172,8 +172,13 @@ function Pet(id) {
                 
             }
             <Footer />
-        </div>
-    )
-}
 
-export default Pet
+        </div>
+      </div>
+    </div>
+    <Footer/>
+    </div>
+  );
+};
+
+export default AboutUs;

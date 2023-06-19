@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <div id='footerDiv'>
       <div>
-        <img className='logo' src="https://www.linkpicture.com/q/logo-no-background.png" alt="" />
+        <img className='logo2' src="https://www.linkpicture.com/q/logo-no-background.png" alt="" />
         <h2>About us:</h2>
         <p>We are the pet care. We take care of pets, we solves the pets prolems. We love to save pets and help them to recover from any 
           kind of Disease.  

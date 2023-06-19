@@ -55,6 +55,7 @@ const Services = () => {
       description: 'Treat your pet to a luxurious spa experience with our range of pet spa services.',
       icon: '💅',
     },
+
   ];
 
   return (
