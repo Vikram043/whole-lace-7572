@@ -15,10 +15,12 @@ This is a full-stack web application for managing pet care services. It is built
 
 ## Features
 
-- User-friendly interface for pet owners to schedule and manage pet care services.
-- Service providers can view and manage appointments and update pet information.
-- Integration with a database to store pet and appointment details securely.
-- Responsive design using Tailwind CSS, ensuring a seamless experience across different devices.
+   - Appointment Booking: Users can conveniently schedule appointments for their pets by selecting preferred dates and available time slots.
+   - Doctor Profiles: Detailed profiles of experienced veterinarians are available, including their specialties, qualifications, and professional experience.
+   - Real-time Availability: Users can view real-time availability of doctors and choose the most suitable time slot for their appointment.
+   - Secure Communication: Built-in messaging functionality allows pet owners to communicate directly with doctors to discuss pet health concerns and ask questions 
+         prior to appointments.
+   - Notifications and Reminders: Automated email or push notifications ensure that users receive appointment confirmations, reminders, and any updates from the doctors.
 
 ## Technologies Used
 
