@@ -16,7 +16,7 @@ const AdminStaffEdit = () => {
   useEffect(() => {
     const fetchOrderData = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/doctor/`);
+        const response = await fetch(`https://precious-tan-binturong.cyclic.app/doctor/`);
         const data = await response.json();
 
         const filteredData=data.filter((el)=>el._id===clientId)
@@ -50,7 +50,7 @@ const AdminStaffEdit = () => {
     event.preventDefault();
 
     // Make API request to update admin settings
-    fetch(`http://localhost:8000/users/update/${clientId}`, {
+    fetch(`https://precious-tan-binturong.cyclic.app/users/update/${clientId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
