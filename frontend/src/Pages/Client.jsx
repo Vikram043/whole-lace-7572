@@ -53,7 +53,7 @@ export default function Client() {
 
 
     // connecting FE with BE
-    fetch("https://precious-tan-binturong.cyclic.app/users/details/", {
+    fetch("http://localhost:8000/users/details/", {
       method: "POST",
       headers: {
         "Content-type": "application/json"
