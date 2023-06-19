@@ -10,7 +10,7 @@ const ProfileDoc = () => {
   const [clientdata, setClientData] = useState([]);
   const [counter, setcounter] = useState(0)
   useEffect(() => {
-    fetch("http://localhost:8000/doctor/")
+    fetch("https://precious-tan-binturong.cyclic.app/doctor/")
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -19,7 +19,7 @@ const ProfileDoc = () => {
       .catch((err) => console.log(err));
   }, []);
   useEffect(() => {
-    fetch("http://localhost:8000/users/")
+    fetch("https://precious-tan-binturong.cyclic.app/users/")
       .then((res) => res.json())
       .then((res) => {
         console.log(res.msg);
@@ -72,7 +72,7 @@ const ProfileDoc = () => {
                     id="removeBtn"
                     onClick={() => {                      
                       fetch(
-                        `http://localhost:8000/users/delete/${e._id}`,
+                        `https://precious-tan-binturong.cyclic.app/users/delete/${e._id}`,
                         {
                           method: "DELETE",
                           headers: {

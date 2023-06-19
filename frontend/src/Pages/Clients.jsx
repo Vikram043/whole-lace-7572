@@ -10,7 +10,7 @@ export default function Clients() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await fetch('http://localhost:8000/users/');
+        const result = await fetch('https://precious-tan-binturong.cyclic.app/users/');
         const data = await result.json();
         console.log(data.msg);
         setRecentOrderData(data.msg);

@@ -93,7 +93,7 @@ const AdminLogin = () => {
         // If there are no errors, perform login authentication
         if (errors.emailError === '' && errors.passwordError === '') {
             try {
-                const response = await fetch('http://localhost:8000/user/login', {
+                const response = await fetch('https://precious-tan-binturong.cyclic.app/user/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

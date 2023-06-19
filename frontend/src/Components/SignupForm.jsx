@@ -105,7 +105,7 @@ const Form = () => {
             formData.pass === formData.confirmPassword
         ) {
             try {
-                const response = await fetch(`http://localhost:8000/user/register`, {
+                const response = await fetch(`https://precious-tan-binturong.cyclic.app/user/register`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

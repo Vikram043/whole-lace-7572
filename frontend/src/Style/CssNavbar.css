@@ -6,7 +6,7 @@
   align-items: center;
   background-color: white;
   color: green;
-  padding: 15px;
+  /* padding: 15px; */
   width: 100%;
   position: fixed;
   margin-top: -90px;
@@ -14,12 +14,18 @@
   /* margin-bottom: 200px; */
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+/* #nav img{
+  width:100%;
+} */
 
 .logo {
-  width: 150px;
+  display: content;
+  width: 100%;
   height: auto;
   margin-right: 20px;
   margin-top: 20px;
+  margin-left: 30px;
+  /* border: 2px solid; */
 }
 
 #profile {
@@ -34,7 +40,7 @@
   margin-right: 10px;
 }
 
-button {
+#nav button {
   background: none;
   border: none;
   padding: 0;

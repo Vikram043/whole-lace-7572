@@ -11,7 +11,7 @@ export default function Doctor() {
   const [data, setData] = useState([])
   const [filterData, setFilterData] = useState([])
   useEffect(()=>{
-    fetch("http://localhost:8000/doctor/")
+    fetch("https://precious-tan-binturong.cyclic.app/doctor/")
     .then((res)=>res.json())
     .then((res)=>{
       console.log("hello")

@@ -7,7 +7,7 @@ function PopularProducts() {
 	const [popularProducts,setPopularProducts]=useState([])
 	useEffect(()=>{
 		const fetchedData=async ()=>{
-			const result=await fetch(`http://localhost:8000/doctor/`)
+			const result=await fetch(`https://precious-tan-binturong.cyclic.app/doctor/`)
 			const data=await result.json()
 			console.log(data)
 			setPopularProducts(data)
@@ -18,7 +18,7 @@ function PopularProducts() {
 	const handleDelete = async (id) => {
 		const clientId = id;
 		try {
-		  const result = await fetch(`http://localhost:8000/users/delete/${clientId}`, {
+		  const result = await fetch(`https://precious-tan-binturong.cyclic.app/users/delete/${clientId}`, {
 			method: 'DELETE',
 		  });
 	
