@@ -42,11 +42,13 @@ Make sure you have Node.js and MongoDB installed on your machine before running 
 
 ## Contribution
 
-Vikram Naik
-Rohit Chauhan
-Avinash Mohandev
-Kamlesh Das
-Venkatesh Tiwari
+- **Vikram naik**
+- **Rohit Chauhan**
+- **Avinash Mohandev**
+- **Kamlesh Das**
+- **Venkatesh Tiwari**
+
+
 
 ## License
 
