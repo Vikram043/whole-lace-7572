@@ -26,7 +26,7 @@ This is a full-stack web application for managing pet care services. It is built
 - **Backend**: Node.js, Express
 - **Database**: MongoDB
 - **Authentication**: JSON Web Tokens (JWT)
-- **Deployment**: Heroku
+- **Deployment**: Netlify
 
 ## Installation
 
@@ -42,7 +42,11 @@ Make sure you have Node.js and MongoDB installed on your machine before running 
 
 ## Contribution
 
-Contributions are welcome! If you find any issues or have suggestions for improvement, please feel free to submit a pull request. Make sure to follow the project's code style and guidelines.
+Vikram Naik
+Rohit Chauhan
+Avinash Mohandev
+Kamlesh Das
+Venkatesh Tiwari
 
 ## License
 
