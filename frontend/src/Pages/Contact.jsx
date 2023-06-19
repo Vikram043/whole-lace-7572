@@ -53,7 +53,9 @@ const Contact = () => {
             required
           ></textarea>
         </div>
-        <button type="submit">Submit</button>
+        <button onClick={()=>{
+          alert("Message submitted successfully")
+        }} type="submit">Submit</button>
       </form>
     </div>
         <Footer/>

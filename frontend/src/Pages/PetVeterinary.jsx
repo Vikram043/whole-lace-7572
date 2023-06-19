@@ -25,6 +25,8 @@ const PetVeterinary = () => {
   return (
     <div>
         <Navbar/>
+        <img id='banner' src="https://wallpapers.com/images/hd/veterinary-cartoon-graphic-art-bu870jgkmy5se8ky.jpg" alt="banner" />
+
     <div className="pet-veterinary">
       <div className="pet-veterinary-header">
         <h1>Pet Veterinary Services</h1>
