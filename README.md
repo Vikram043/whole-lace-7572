@@ -2,10 +2,10 @@
 # Pet Veterinary
 
 ## Backend Deploy link here!
-https://precious-tan-binturong.cyclic.app/
+https://pet-veterinary.onrender.com
 
 ## Frontend Deploy Link Here!
-https://whole-lace-7572-delta.vercel.app/
+https://pet-veterinary.vercel.app/
 
 # Pet Care Application
 
